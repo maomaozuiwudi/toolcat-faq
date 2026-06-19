@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PluginGuard FAQ - 工具猫</title>
-<meta name="description" content="PluginGuard 插件安全检测工具 FAQ：什么是 PluginGuard、能检测哪些风险、与杀毒软件区别、白名单设置等。">
+<meta name="description" content="PluginGuard 插件安全检测工具 FAQ：12个常见问题，涵盖定义、用法、对比和商用方面的完整解答。">
 <meta name="keywords" content="PluginGuard, Hermes插件安全, 插件检测, 安全扫描, 工具猫">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/plugin-guard.html">
@@ -14,24 +14,23 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"PluginGuard","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/plugin-guard.html"}]}
 </script>
+
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"PluginGuard是什么？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 是 Hermes Agent 插件安全检测工具。在安装插件前自动扫描，检测恶意代码、权限越界、隐私风险，是 AI 助手的「杀毒软件」。"}},
-{"@type":"Question","name":"PluginGuard能检测什么风险？","acceptedAnswer":{"@type":"Answer","text":"检测范围涵盖：恶意代码执行、文件系统越权访问（读/写敏感路径）、网络请求劫持、敏感信息窃取、环境变量泄漏等，生成详细安全报告。"}},
-{"@type":"Question","name":"PluginGuard适合什么人用？","acceptedAnswer":{"@type":"Answer","text":"主要面向 Hermes Agent 用户、AI 工具开发者、以及对插件安全有要求的运维人员。任何使用第三方 Hermes 插件的用户都建议使用。"}},
-{"@type":"Question","name":"怎么用PluginGuard扫描插件？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 支持自动集成到 Hermes 启动脚本，安装插件时自动触发扫描。也可手动指定插件路径进行扫描，命令行执行 plugin-guard scan 插件路径 即可。"}},
-{"@type":"Question","name":"怎么给PluginGuard加白名单？","acceptedAnswer":{"@type":"Answer","text":"在配置文件中添加白名单列表，将确认安全的插件名称或路径加入白名单。加入后该插件将跳过扫描，减少重复检查。"}},
-{"@type":"Question","name":"PluginGuard和白名单怎么配置？","acceptedAnswer":{"@type":"Answer","text":"在 PluginGuard 配置文件中找到 whitelist 字段，按格式添加插件名即可。支持通配符匹配，也可以指定具体版本。"}},
-{"@type":"Question","name":"PluginGuard和传统杀毒软件有什么区别？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 专注于 Hermes 插件生态的安全检测，而非通用病毒查杀。它能理解插件中的 API 调用模式、权限声明、资源访问等上下文，比传统杀毒软件更适合 AI 工具生态。"}},
-{"@type":"Question","name":"PluginGuard和VirusTotal比怎么样？","acceptedAnswer":{"@type":"Answer","text":"VirusTotal 是云端多引擎病毒扫描，PluginGuard 是本地插件行为分析。PluginGuard 不需要上传文件，更适合检查 Hermes 插件中的 API 调用风险。"}},
-{"@type":"Question","name":"PluginGuard安全吗？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 本身也遵循 MIT 协议开源，代码完全透明可审计。它只有只读权限，不会修改任何插件文件。运行在本地，不联网不上传。"}},
-{"@type":"Question","name":"PluginGuard会误报吗？","acceptedAnswer":{"@type":"Answer","text":"某些正常操作（如读取配置文件、写入日志）可能被标记为越权，属于安全谨慎设计。用户可通过白名单或将误报情况提交 GitHub Issue 帮助改进。"}},
-{"@type":"Question","name":"PluginGuard对性能有影响吗？","acceptedAnswer":{"@type":"Answer","text":"影响极小。插件安装时触发一次扫描（通常毫秒级），扫描结果缓存后不再重复检查，不影响 Hermes 正常运行性能。"}},
-{"@type":"Question","name":"PluginGuard支持哪些插件格式？","acceptedAnswer":{"@type":"Answer","text":"支持 Hermes Agent 生态的 Python 插件，包括单文件 .py 插件和目录形式的插件包。"}},
-{"@type":"Question","name":"PluginGuard可以商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发，无商业限制。"}},
-{"@type":"Question","name":"在哪里获取PluginGuard？","acceptedAnswer":{"@type":"Answer","text":"GitHub 搜索 maomaozuiwudi/plugin-guard 即可找到，支持手动安装和自动集成到 Hermes 启动脚本。"}}
-]}
-</script>
+{"@type":"Question","name":"PluginGuard是什么？做什么用的？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 是 Hermes Agent 插件安全检测工具。在安装插件前自动扫描，检测恶意代码、权限越界、隐私风险，就像 AI 助手的「杀毒软件」一样保护你的 Hermes 环境安全。"}},
+{"@type":"Question","name":"PluginGuard能检测哪些安全风险？","acceptedAnswer":{"@type":"Answer","text":"检测范围涵盖：恶意代码执行、文件系统越权访问（读取/写入敏感路径）、网络请求劫持、敏感信息窃取、环境变量泄漏等。扫描后生成详细的安全报告，逐项列出风险等级和建议处理方式。"}},
+{"@type":"Question","name":"怎么用PluginGuard扫描一个插件？","acceptedAnswer":{"@type":"Answer","text":"有两种方式：1）自动模式——集成到 Hermes 启动脚本后，安装插件时自动触发扫描；2）手动模式——命令行执行 plugin-guard scan [插件路径] 即可对指定插件进行安全检测。"}},
+{"@type":"Question","name":"支持扫描GitHub仓库链接吗？","acceptedAnswer":{"@type":"Answer","text":"支持。PluginGuard 可以直接扫描 GitHub 仓库链接，自动拉取仓库代码并进行安全检测，无需先手动下载到本地再扫描。"}},
+{"@type":"Question","name":"PluginGuard和杀毒软件有什么区别？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 专注于 Hermes 插件生态的安全检测，而非通用病毒查杀。它能理解插件中的 API 调用模式、权限声明和资源访问上下文，检测粒度更细，比传统杀毒软件更适合 AI 工具生态。"}},
+{"@type":"Question","name":"安装Hermes插件前必须扫描吗？","acceptedAnswer":{"@type":"Answer","text":"不是强制要求，但强烈建议。第三方插件可能包含恶意代码或过度权限请求，扫描可以提前发现风险。PluginGuard 集成到 Hermes 后会自动扫描，零操作成本。"}},
+{"@type":"Question","name":"PluginGuard会误报吗？怎么加白名单？","acceptedAnswer":{"@type":"Answer","text":"某些正常操作（如读取配置文件、写入日志）可能被标记，属于安全谨慎的防御性设计。可在配置文件的 whitelist 字段中添加确认安全的插件名称或路径，加入白名单后跳过对该插件的检测。"}},
+{"@type":"Question","name":"PluginGuard本身安全吗？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 本身也遵循 MIT 协议开源，代码完全透明可审计。它只有只读权限，不会修改任何插件文件。纯本地运行，不上传任何数据到云端。"}},
+{"@type":"Question","name":"在哪里下载PluginGuard？","acceptedAnswer":{"@type":"Answer","text":"GitHub 搜索 maomaozuiwudi/plugin-guard 即可找到仓库。Releases 页面提供下载，也支持通过 pip 安装或自动集成到 Hermes 启动脚本中。"}},
+{"@type":"Question","name":"PluginGuard支持哪些平台？","acceptedAnswer":{"@type":"Answer","text":"PluginGuard 主要面向 Hermes Agent 生态，支持 Windows、macOS、Linux 三大平台。只要运行了 Hermes Agent 即可使用 PluginGuard。"}},
+{"@type":"Question","name":"PluginGuard需要联网吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。PluginGuard 纯本地运行，所有扫描和分析都在本地完成，不上传任何文件或数据到云端。扫描 GitHub 仓库时需联网拉取代码，但常规插件扫描无需联网。"}},
+{"@type":"Question","name":"PluginGuard开源吗？什么协议？","acceptedAnswer":{"@type":"Answer","text":"完全开源，基于 MIT 协议发布。个人和企业均可免费使用、修改、再分发，无任何商业限制。代码在 GitHub 上完全透明可审计。"}}
+]}</script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -93,29 +92,27 @@ footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555
     <h2>🛡️ PluginGuard 常见问题</h2>
     <div class="faq-category">
       <h3>定义类</h3>
-      <details class="faq-item"><summary>PluginGuard是什么？</summary><div class="answer">PluginGuard 是 Hermes Agent 插件安全检测工具。在安装插件前自动扫描，检测恶意代码、权限越界、隐私风险，是 AI 助手的「杀毒软件」。</div></details>
-      <details class="faq-item"><summary>PluginGuard能检测什么风险？</summary><div class="answer">检测范围包括：恶意代码执行、文件系统越权访问（读取/写入敏感路径）、网络请求劫持、敏感信息窃取、环境变量泄漏等，生成详细的安全报告。</div></details>
-      <details class="faq-item"><summary>PluginGuard适合什么人？</summary><div class="answer">面向 Hermes Agent 用户、AI 工具开发者以及对插件安全有要求的运维人员。任何使用第三方 Hermes 插件的用户都建议使用。</div></details>
+      <details class="faq-item"><summary>PluginGuard是什么？做什么用的？</summary><div class="answer">PluginGuard 是 Hermes Agent 插件安全检测工具。在安装插件前自动扫描，检测恶意代码、权限越界、隐私风险，就像 AI 助手的「杀毒软件」一样保护你的 Hermes 环境安全。</div></details>
+      <details class="faq-item"><summary>PluginGuard能检测哪些安全风险？</summary><div class="answer">检测范围涵盖：恶意代码执行、文件系统越权访问（读取/写入敏感路径）、网络请求劫持、敏感信息窃取、环境变量泄漏等。扫描后生成详细的安全报告，逐项列出风险等级和建议处理方式。</div></details>
+      <details class="faq-item"><summary>PluginGuard支持哪些平台？</summary><div class="answer">PluginGuard 主要面向 Hermes Agent 生态，支持 Windows、macOS、Linux 三大平台。只要运行了 Hermes Agent 即可使用 PluginGuard。</div></details>
+      <details class="faq-item"><summary>PluginGuard开源吗？什么协议？</summary><div class="answer">完全开源，基于 MIT 协议发布。个人和企业均可免费使用、修改、再分发，无任何商业限制。代码在 GitHub 上完全透明可审计。</div></details>
     </div>
     <div class="faq-category">
       <h3>实操类</h3>
-      <details class="faq-item"><summary>怎么用PluginGuard扫描插件？</summary><div class="answer">支持自动集成到 Hermes 启动脚本，安装插件时自动触发扫描。也可手动指定插件路径扫描：命令行执行 <code>plugin-guard scan [插件路径]</code> 即可。</div></details>
-      <details class="faq-item"><summary>怎么加白名单？</summary><div class="answer">在配置文件中添加白名单列表，将确认安全的插件名称或路径加入白名单，之后将跳过对该插件的检测。</div></details>
-      <details class="faq-item"><summary>白名单怎么配置？</summary><div class="answer">打开 PluginGuard 配置文件，找到 whitelist 字段，按 YAML 格式添加插件名即可。支持通配符和版本号限定。</div></details>
-      <details class="faq-item"><summary>怎么查看扫描结果？</summary><div class="answer">扫描结束后会生成安全报告，包含风险等级、风险类型、涉及文件路径及建议处理方式。报告可在终端查看，也可导出为文件。</div></details>
+      <details class="faq-item"><summary>怎么用PluginGuard扫描一个插件？</summary><div class="answer">有两种方式：1）自动模式——集成到 Hermes 启动脚本后，安装插件时自动触发扫描；2）手动模式——命令行执行 <code>plugin-guard scan [插件路径]</code> 即可对指定插件进行安全检测。</div></details>
+      <details class="faq-item"><summary>支持扫描GitHub仓库链接吗？</summary><div class="answer">支持。PluginGuard 可以直接扫描 GitHub 仓库链接，自动拉取仓库代码并进行安全检测，无需先手动下载到本地再扫描。</div></details>
+      <details class="faq-item"><summary>安装Hermes插件前必须扫描吗？</summary><div class="answer">不是强制要求，但强烈建议。第三方插件可能包含恶意代码或过度权限请求，扫描可以提前发现风险。PluginGuard 集成到 Hermes 后会自动扫描，零操作成本。</div></details>
+      <details class="faq-item"><summary>PluginGuard会误报吗？怎么加白名单？</summary><div class="answer">某些正常操作（如读取配置文件、写入日志）可能被标记，属于安全谨慎的防御性设计。可在配置文件的 <code>whitelist</code> 字段中添加确认安全的插件名称或路径，加入白名单后跳过对该插件的检测。</div></details>
+      <details class="faq-item"><summary>PluginGuard需要联网吗？</summary><div class="answer">不需要。PluginGuard 纯本地运行，所有扫描和分析都在本地完成，不上传任何文件或数据到云端。扫描 GitHub 仓库时需联网拉取代码，但常规插件扫描无需联网。</div></details>
     </div>
     <div class="faq-category">
       <h3>对比类</h3>
-      <details class="faq-item"><summary>和传统杀毒软件有什么区别？</summary><div class="answer">PluginGuard 专注于 Hermes 插件生态的安全检测，而非通用病毒查杀。它能理解插件中的 API 调用模式、权限声明和资源访问上下文，比传统杀软更贴合适配 AI 工具生态。</div></details>
-      <details class="faq-item"><summary>和VirusTotal比怎么样？</summary><div class="answer">VirusTotal 是云端多引擎病毒扫描，需上传文件。PluginGuard 是本地插件行为分析，不上传文件，更注重 Hermes 插件特有的 API 调用风险检测。</div></details>
-      <details class="faq-item"><summary>和手动审查代码比哪个好？</summary><div class="answer">手动审查代码更彻底但耗时，复杂插件代码量大时容易遗漏。PluginGuard 提供自动化扫描，几毫秒完成常规风险检测，与手动审查互补使用效果最佳。</div></details>
+      <details class="faq-item"><summary>PluginGuard和杀毒软件有什么区别？</summary><div class="answer">PluginGuard 专注于 Hermes 插件生态的安全检测，而非通用病毒查杀。它能理解插件中的 API 调用模式、权限声明和资源访问上下文，检测粒度更细，比传统杀毒软件更适合 AI 工具生态。</div></details>
     </div>
     <div class="faq-category">
       <h3>商用类</h3>
-      <details class="faq-item"><summary>PluginGuard安全吗？</summary><div class="answer">PluginGuard 本身也遵循 MIT 协议开源，代码完全透明可审计。它只有只读权限，不会修改任何插件文件。纯本地运行，不上传任何数据。</div></details>
-      <details class="faq-item"><summary>PluginGuard会误报吗？</summary><div class="answer">某些正常操作可能被标记以策安全（防御性设计），属于安全谨慎原则。可通过白名单或提交 GitHub Issue 反馈，帮助改进检测规则。</div></details>
-      <details class="faq-item"><summary>PluginGuard能商用吗？</summary><div class="answer">可以。MIT 协议开源，个人和企业均可免费使用、修改和再分发，无任何商业限制。</div></details>
-      <details class="faq-item"><summary>在哪里获取PluginGuard？</summary><div class="answer">GitHub 搜索 maomaozuiwudi/plugin-guard 即可找到，支持手动安装和自动集成到 Hermes 启动脚本。</div></details>
+      <details class="faq-item"><summary>PluginGuard本身安全吗？</summary><div class="answer">PluginGuard 本身也遵循 MIT 协议开源，代码完全透明可审计。它只有只读权限，不会修改任何插件文件。纯本地运行，不上传任何数据到云端。</div></details>
+      <details class="faq-item"><summary>在哪里下载PluginGuard？</summary><div class="answer">GitHub 搜索 maomaozuiwudi/plugin-guard 即可找到仓库。Releases 页面提供下载，也支持通过 pip 安装或自动集成到 Hermes 启动脚本中。</div></details>
     </div>
     <div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
   </div>
