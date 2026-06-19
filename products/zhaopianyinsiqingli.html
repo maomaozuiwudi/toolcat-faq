@@ -1,179 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>照片隐私清理 FAQ - 工具猫</title>
-<meta name="description" content="照片隐私清理 FAQ：EXIF 信息清理工具常见问题，涵盖定义、操作、对比、商用，元数据类型、批量处理等。">
-<meta name="keywords" content="照片隐私清理, EXIF清理, 照片元数据, GPS清理, 隐私保护, 图片信息清除">
+<meta name="description" content="照片隐私清理 FAQ：批量清除EXIF/GPS元数据、保护隐私、删除拍摄信息等常见问题。">
+<meta name="keywords" content="照片隐私清理, EXIF清除, GPS元数据, 照片隐私, 工具猫">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/zhaopianyinsiqingli.html">
-<meta name="baidu-site-verification" content="codeva-XXXXX" />
-<meta name="bing-site-verification" content="XXXXX" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
-    {"@type": "ListItem", "position": 2, "name": "照片隐私清理", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/zhaopianyinsiqingli.html"}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"照片隐私清理是什么？","acceptedAnswer":{"@type":"Answer","text":"照片隐私清理是一款 Windows 桌面工具，用于清除照片文件中的 EXIF 元数据（包括 GPS 位置、相机型号、拍摄时间、设备信息等），在分享照片前保护个人隐私。"}},
-    {"@type":"Question","name":"EXIF信息是什么？","acceptedAnswer":{"@type":"Answer","text":"EXIF（可交换图像文件格式）是数码照片自动记录的一组元数据，包含拍摄时间、相机型号、镜头参数、曝光设置，以及最重要的——GPS 地理位置信息。这些数据在你分享原图时可能泄露隐私。"}},
-    {"@type":"Question","name":"会删除原图吗？","acceptedAnswer":{"@type":"Answer","text":"不会。默认操作是「另存为清理后副本」，保留原始照片文件。也可以在设置中选择直接覆盖原图（建议先备份）。清理操作可逆性差，建议先在副本上操作。"}},
-    {"@type":"Question","name":"支持批量处理吗？","acceptedAnswer":{"@type":"Answer","text":"支持。可选择整个文件夹或拖入多张照片，一键批量清理所有 EXIF 信息。一次性处理数百张照片，处理进度实时显示。"}},
-    {"@type":"Question","name":"能清理哪些元数据？","acceptedAnswer":{"@type":"Answer","text":"可选择性清理：GPS 位置信息、相机型号/厂商、拍摄日期时间、镜头信息、曝光参数、缩略图、版权信息、软件信息等。支持全选清理或逐个选择。"}},
-    {"@type":"Question","name":"GPS位置信息能清掉吗？","acceptedAnswer":{"@type":"Answer","text":"可以。GPS 位置信息是 EXIF 中最敏感的隐私数据之一，照片隐私清理可彻底删除所有地理定位信息，清理后照片不再包含拍摄地点数据。"}},
-    {"@type":"Question","name":"和其他工具比怎么样？","acceptedAnswer":{"@type":"Answer","text":"相比在线 EXIF 清理工具，照片隐私清理为本地运行，照片无需上传到服务器，隐私保护更彻底。相比专业工具如 ExifTool，本工具提供图形界面，操作直观，无需记忆命令行参数。"}},
-    {"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"照片隐私清理完全免费开源，基于 MIT 协议。个人和企业均可免费使用。"}}
-  ]
-}
-</script>
-
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
-  background: #0f0f23;
-  color: #d4c9a8;
-  line-height: 1.8;
-  min-height: 100vh;
-}
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0f0f23; }
-::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
-h1, h2, h3, h4 { font-weight: normal; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
-h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
-.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
-  border-bottom: 1px solid #2a2a4a;
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
-}
-header::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
-}
-.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
-.breadcrumb a { color: #8888cc; text-decoration: none; }
-.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
-.product-info { padding: 2rem 0; text-align: center; }
-.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
-.product-name { font-size: 1.8rem; color: #d4a76a; }
-.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
-.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
-.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
-.faq-section { padding: 2rem 0; }
-.faq-category { margin-bottom: 2rem; }
-.faq-category h3 {
-  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
-  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
-}
-details.faq-item {
-  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
-  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
-}
-details.faq-item[open] { border-color: #c9a96e44; }
-details.faq-item summary {
-  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
-  color: #c9c9dd; list-style: none; display: flex; align-items: center;
-  gap: 8px; user-select: none;
-}
-details.faq-item summary::-webkit-details-marker { display: none; }
-details.faq-item summary::before {
-  content: '\25b8'; font-size: 0.8rem; color: #c9a96e;
-  transition: transform 0.2s; flex-shrink: 0;
-}
-details.faq-item[open] summary::before { transform: rotate(90deg); }
-details.faq-item summary:hover { background: #1e1e3a; }
-details.faq-item .answer {
-  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
-  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
-}
-.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
-.back-link:hover { color: #c9a96e; text-decoration: underline; }
-footer {
-  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
-  color: #5555aa; font-size: 0.8rem;
-}
-@media (max-width: 640px) {
-  .product-name { font-size: 1.4rem; }
-  h1 { font-size: 1.4rem; }
-  .container { padding: 0 14px; }
-  details.faq-item summary { font-size: 0.85rem; }
-}
-</style>
+<meta name="baidu-site-verification" content="codeva-XXXXX" /><meta name="bing-site-verification" content="XXXXX" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"照片隐私清理","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/zhaopianyinsiqingli.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"照片隐私清理是什么？","acceptedAnswer":{"@type":"Answer","text":"照片隐私清理是一款批量清除照片元数据的工具，可清除 EXIF 和 GPS 数据，包括拍摄设备信息、拍摄时间、地理位置、GPS 坐标等隐私信息。"}},
+{"@type":"Question","name":"能清除哪些信息？","acceptedAnswer":{"@type":"Answer","text":"清除拍摄设备型号、拍摄时间、GPS 经纬度坐标、地理位置名称、照片编辑历史、版权信息等所有 EXIF 元数据。"}},
+{"@type":"Question","name":"为什么要清理照片隐私？","acceptedAnswer":{"@type":"Answer","text":"分享照片到社交媒体或发送给他人时，EXIF 数据可能泄露你的拍摄设备、位置和时间等隐私信息。清理后可安全分享。"}},
+{"@type":"Question","name":"怎么批量清除？","acceptedAnswer":{"@type":"Answer","text":"选择「批量导入」，添加需要处理的照片文件（支持 JPG/PNG/HEIC 等格式），点击一键清理即可批量清除所有元数据。"}},
+{"@type":"Question","name":"清理后会损坏原图吗？","acceptedAnswer":{"@type":"Answer","text":"不会。仅清除元数据信息，不影响图片本身的像素、画质和尺寸。支持保留原图备份。"}},
+{"@type":"Question","name":"和其他元数据清理工具有什么不同？","acceptedAnswer":{"@type":"Answer","text":"照片隐私清理完全免费开源，纯本地运行不上传图片。而许多在线元数据清理工具需要上传图片，存在二次隐私泄露风险。"}},
+{"@type":"Question","name":"能商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。MIT 协议开源，个人和企业均可免费使用。"}},
+{"@type":"Question","name":"支持哪些图片格式？","acceptedAnswer":{"@type":"Answer","text":"支持 JPG、PNG、HEIC、WEBP、TIFF 等常见图片格式的 EXIF 清理。"}},
+{"@type":"Question","name":"安全吗？","acceptedAnswer":{"@type":"Answer","text":"纯本地运行，不上传任何图片到云端，隐私数据全程在本地处理。"}}
+]}</script>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:KaiTi,STKaiti,SimSun,"Noto Serif SC","Songti SC",serif;background:#0f0f23;color:#d4c9a8;line-height:1.8;min-height:100vh}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0f0f23}::-webkit-scrollbar-thumb{background:#3a3a5c;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#c9a96e}h1,h2,h3{font-weight:normal}h1{font-size:2rem}h2{font-size:1.5rem;color:#c9a96e;letter-spacing:0.12em;margin-bottom:1.5rem}h2::after{content:'';display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c9a96e,transparent);margin:0.5rem auto 0}.container{max-width:900px;margin:0 auto;padding:0 20px}header{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f23 50%,#1a1a2e 100%);border-bottom:1px solid #2a2a4a;padding:2rem 0;text-align:center;position:relative}header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#c9a96e,#d4a76a,#c9a96e,transparent)}.breadcrumb{color:#6666aa;font-size:0.85rem;margin-bottom:0.8rem}.breadcrumb a{color:#8888cc;text-decoration:none}.breadcrumb a:hover{color:#c9a96e;text-decoration:underline}.product-info{padding:2rem 0;text-align:center}.product-icon{font-size:3rem;margin-bottom:0.5rem}.product-name{font-size:1.8rem;color:#d4a76a}.product-name-en{font-size:0.9rem;color:#5555aa}.product-desc{color:#9999bb;font-size:0.95rem;max-width:600px;margin:0 auto 1rem}.tag{display:inline-block;font-size:0.75rem;padding:2px 10px;border-radius:3px;background:#1a1a3e;color:#8888bb;border:1px solid #2a2a5a}.tag.img{color:#61afef;border-color:#61afef44}.tag.sys{color:#98c379;border-color:#98c37944}.faq-section{padding:2rem 0}.faq-category{margin-bottom:2rem}.faq-category h3{font-size:1.1rem;color:#c9a96e;margin-bottom:0.8rem;padding-left:0.5rem;border-left:3px solid #c9a96e}details.faq-item{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;margin-bottom:6px;overflow:hidden;transition:border-color 0.2s}details.faq-item[open]{border-color:#c9a96e44}details.faq-item summary{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:#c9c9dd;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}details.faq-item summary::-webkit-details-marker{display:none}details.faq-item summary::before{content:'▸';font-size:0.8rem;color:#c9a96e;transition:transform 0.2s;flex-shrink:0}details.faq-item[open] summary::before{transform:rotate(90deg)}details.faq-item summary:hover{background:#1e1e3a}details.faq-item .answer{padding:0 16px 12px;font-size:0.86rem;color:#9999bb;line-height:1.8;border-top:1px solid #2a2a4a;padding-top:10px}.back-link{display:inline-block;margin-top:1.5rem;color:#8888cc;text-decoration:none;font-size:0.9rem}.back-link:hover{color:#c9a96e;text-decoration:underline}footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555aa;font-size:0.8rem}@media(max-width:640px){.product-name{font-size:1.4rem}h1{font-size:1.4rem}.container{padding:0 14px}details.faq-item summary{font-size:0.85rem}}</style>
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>照片隐私清理</span>
-    </div>
-    <div class="product-info">
-      <div class="product-icon">📷</div>
-      <div class="product-name">照片隐私清理</div>
-      <div class="product-name-en">photo-privacy-cleaner — 照片隐私清理</div>
-      <div class="product-desc">一键清除照片 EXIF 隐私信息，保护你的拍摄位置和设备数据。</div>
-      <div><span class="tag">工具</span><span class="tag">隐私</span><span class="tag">图片</span></div>
-    </div>
-  </div>
-</header>
-
-<section class="faq-section">
-  <div class="container">
-    <h2>📷 照片隐私清理 常见问题</h2>
-
-    <div class="faq-category">
-      <h3>定义类</h3>
-      <details class="faq-item"><summary>照片隐私清理是什么？</summary><div class="answer">照片隐私清理是一款 Windows 桌面工具，用于清除照片文件中的 EXIF 元数据（包括 GPS 位置、相机型号、拍摄时间、设备信息等），在分享照片前保护个人隐私。</div></details>
-      <details class="faq-item"><summary>EXIF信息是什么？</summary><div class="answer">EXIF（可交换图像文件格式）是数码照片自动记录的一组元数据，包含拍摄时间、相机型号、镜头参数、曝光设置，以及最重要的——GPS 地理位置信息。这些数据在你分享原图时可能泄露隐私。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>实操类</h3>
-      <details class="faq-item"><summary>会删除原图吗？</summary><div class="answer">不会。默认操作是「另存为清理后副本」，保留原始照片文件。也可以在设置中选择直接覆盖原图（建议先备份）。清理操作可逆性差，建议先在副本上操作。</div></details>
-      <details class="faq-item"><summary>支持批量处理吗？</summary><div class="answer">支持。可选择整个文件夹或拖入多张照片，一键批量清理所有 EXIF 信息。一次性处理数百张照片，处理进度实时显示。</div></details>
-      <details class="faq-item"><summary>能清理哪些元数据？</summary><div class="answer">可选择性清理：GPS 位置信息、相机型号/厂商、拍摄日期时间、镜头信息、曝光参数、缩略图、版权信息、软件信息等。支持全选清理或逐个选择。</div></details>
-      <details class="faq-item"><summary>GPS位置信息能清掉吗？</summary><div class="answer">可以。GPS 位置信息是 EXIF 中最敏感的隐私数据之一，照片隐私清理可彻底删除所有地理定位信息，清理后照片不再包含拍摄地点数据。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>对比类</h3>
-      <details class="faq-item"><summary>和其他工具比怎么样？</summary><div class="answer">相比在线 EXIF 清理工具，照片隐私清理为本地运行，照片无需上传到服务器，隐私保护更彻底。相比专业工具如 ExifTool，本工具提供图形界面，操作直观，无需记忆命令行参数。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>商用类</h3>
-      <details class="faq-item"><summary>免费吗？</summary><div class="answer">照片隐私清理完全免费开源，基于 MIT 协议。个人和企业均可免费使用。</div></details>
-    </div>
-
-    <div style="text-align:center;">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>工具猫 · ToolCat 开源工具体系</p>
-    <p><a href="https://github.com/maomaozuiwudi/zhaopianyinsiqingli" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
-  </div>
-</footer>
-
+<header><div class="container"><div class="breadcrumb"><a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>照片隐私清理</span></div><div class="product-info"><div class="product-icon">🔒</div><div class="product-name">照片隐私清理</div><div class="product-name-en">zhaopianyinsiqingli</div><div class="product-desc">批量清除 EXIF / GPS 元数据</div><div><span class="tag img">图片</span><span class="tag sys">安全</span></div></div></div></header>
+<section class="faq-section"><div class="container"><h2>🔒 照片隐私清理 常见问题</h2>
+<div class="faq-category"><h3>定义类</h3>
+<details class="faq-item"><summary>照片隐私清理是什么？</summary><div class="answer">批量清除照片中 EXIF 和 GPS 元数据的工具，包括拍摄设备、时间、位置等隐私信息。</div></details>
+<details class="faq-item"><summary>能清除哪些信息？</summary><div class="answer">设备型号、拍摄时间、GPS 坐标、地理位置、编辑历史、版权信息等所有 EXIF 元数据。</div></details>
+<details class="faq-item"><summary>为什么要清理？</summary><div class="answer">分享照片到社交平台或发送给他人时，EXIF 数据可能泄露设备信息、拍摄位置和时间等隐私。</div></details>
+</div>
+<div class="faq-category"><h3>实操类</h3>
+<details class="faq-item"><summary>怎么批量清除？</summary><div class="answer">「批量导入」添加照片，支持 JPG/PNG/HEIC 等格式，点击一键清理即可。</div></details>
+<details class="faq-item"><summary>清理会损坏原图吗？</summary><div class="answer">不会。仅清除元数据，不影响像素、画质和尺寸。支持保留备份。</div></details>
+<details class="faq-item"><summary>支持查看当前元数据吗？</summary><div class="answer">支持。清理前可预览照片中的 EXIF 信息，了解包含哪些隐私数据。</div></details>
+</div>
+<div class="faq-category"><h3>对比类</h3>
+<details class="faq-item"><summary>和在线清理工具有什么不同？</summary><div class="answer">照片隐私清理纯本地运行不上传图片。在线工具需上传图片，存在二次泄露风险。</div></details>
+<details class="faq-item"><summary>和手机自带功能比？</summary><div class="answer">手机自带仅部分机型支持批量清除。照片隐私清理支持全格式批量处理，更全面。</div></details>
+</div>
+<div class="faq-category"><h3>商用类</h3>
+<details class="faq-item"><summary>能商用吗？</summary><div class="answer">可以。MIT 协议开源。</div></details>
+<details class="faq-item"><summary>安全吗？</summary><div class="answer">纯本地运行，不上传任何图片，隐私全程本地处理。</div></details>
+<details class="faq-item"><summary>支持哪些格式？</summary><div class="answer">JPG、PNG、HEIC、WEBP、TIFF 等常见格式。</div></details>
+</div>
+<div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
+</div></section>
+<footer><div class="container"><p>工具猫 · ToolCat 开源工具体系</p></div></footer>
 </body>
 </html>

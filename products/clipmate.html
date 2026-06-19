@@ -4,182 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ClipMate FAQ - 工具猫</title>
-<meta name="description" content="ClipMate FAQ：剪贴板管理常见问题，涵盖定义、操作、对比、商用，与Ditto对比及隐私安全说明。">
-<meta name="keywords" content="ClipMate, 剪贴板管理器, 剪贴板历史, Ditto替代, 剪贴板增强">
+<meta name="description" content="ClipMate 剪贴板管理器 FAQ：剪贴板历史、搜索、收藏、与Ditto对比、数据安全等。">
+<meta name="keywords" content="ClipMate, 剪贴板管理器, 剪贴板历史, Windows剪贴板, 工具猫">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/clipmate.html">
 <meta name="baidu-site-verification" content="codeva-XXXXX" />
 <meta name="bing-site-verification" content="XXXXX" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
-    {"@type": "ListItem", "position": 2, "name": "ClipMate", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/clipmate.html"}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"ClipMate是什么？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 是一款 Windows 桌面端剪贴板管理工具，能够记录你复制过的所有文字、图片、文件等内容，并提供搜索、收藏、分类管理功能。告别反复复制粘贴的重复劳动，大幅提升日常操作效率。"}},
-    {"@type":"Question","name":"ClipMate能保存什么内容？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 支持保存多种剪贴板内容类型：纯文本、富文本（带格式文字）、图片（位图/PNG）、HTML 片段、文件列表等。所有内容自动记录，按时间排列，随时回溯。"}},
-    {"@type":"Question","name":"ClipMate和Windows自带剪贴板区别？","acceptedAnswer":{"@type":"Answer","text":"Windows 自带剪贴板（Win+V）仅保留最近 25 条历史，不支持图片预览和收藏。ClipMate 无数量上限，支持富文本和图片预览、收藏分类、全文搜索，且历史记录长期保存不自动清空。"}},
-    {"@type":"Question","name":"怎么搜索历史剪贴内容？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 主界面顶部的搜索框支持实时全文检索，输入关键字即可快速定位到包含该内容的剪贴记录。支持按内容类型（文字/图片/文件）筛选。"}},
-    {"@type":"Question","name":"怎么收藏常用内容？","acceptedAnswer":{"@type":"Answer","text":"在 ClipMate 历史列表中右键点击任意记录，选择「收藏」即可将其固定到收藏夹。收藏的内容会在顶部独立展示，不会被新复制的内容冲走，适合保存常用模板、链接、代码片段等。"}},
-    {"@type":"Question","name":"支持快捷键吗？","acceptedAnswer":{"@type":"Answer","text":"支持。ClipMate 提供全局快捷键：默认 Ctrl+Alt+V 打开主界面，Ctrl+Alt+F 搜索，Ctrl+Alt+C 打开收藏夹。所有快捷键可在设置中自定义。"}},
-    {"@type":"Question","name":"能保存图片吗？","acceptedAnswer":{"@type":"Answer","text":"可以。ClipMate 支持保存复制过的图片（位图/PNG 格式），并在历史列表中显示缩略图预览。点击即可查看原图，支持再次复制或保存到本地。"}},
-    {"@type":"Question","name":"ClipMate和Ditto比怎么样？","acceptedAnswer":{"@type":"Answer","text":"两者都是优秀的剪贴板管理工具。ClipMate 更注重界面美观和中文用户的体验，内置全文搜索和收藏分类功能；Ditto 功能强大但界面偏技术风格。ClipMate 对零基础用户更友好，开箱即用。"}},
-    {"@type":"Question","name":"剪贴板数据安全吗？会上传云端吗？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 所有数据本地存储，不上传云端，不联网运行。你的剪贴板内容（包括密码、链接、敏感信息）仅保存在本地数据库中，不会离开你的电脑。"}},
-    {"@type":"Question","name":"占用内存大吗？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 经过性能优化，空闲时内存占用约 30-60MB，即使数千条历史记录也不影响系统流畅。支持设置最大记录条数和自动清理策略。"}},
-    {"@type":"Question","name":"MIT协议可以商用吗？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 基于 MIT 协议开源，个人和企业均可免费使用、修改、再分发，无任何商业限制。企业内部部署或集成到商用产品中都完全免费。"}}
-  ]
-}
-</script>
-
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
-  background: #0f0f23;
-  color: #d4c9a8;
-  line-height: 1.8;
-  min-height: 100vh;
-}
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0f0f23; }
-::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
-h1, h2, h3, h4 { font-weight: normal; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
-h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
-.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
-  border-bottom: 1px solid #2a2a4a;
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
-}
-header::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
-}
-.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
-.breadcrumb a { color: #8888cc; text-decoration: none; }
-.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
-.product-info { padding: 2rem 0; text-align: center; }
-.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
-.product-name { font-size: 1.8rem; color: #d4a76a; }
-.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
-.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
-.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
-.faq-section { padding: 2rem 0; }
-.faq-category { margin-bottom: 2rem; }
-.faq-category h3 {
-  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
-  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
-}
-details.faq-item {
-  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
-  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
-}
-details.faq-item[open] { border-color: #c9a96e44; }
-details.faq-item summary {
-  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
-  color: #c9c9dd; list-style: none; display: flex; align-items: center;
-  gap: 8px; user-select: none;
-}
-details.faq-item summary::-webkit-details-marker { display: none; }
-details.faq-item summary::before {
-  content: '\25b8'; font-size: 0.8rem; color: #c9a96e;
-  transition: transform 0.2s; flex-shrink: 0;
-}
-details.faq-item[open] summary::before { transform: rotate(90deg); }
-details.faq-item summary:hover { background: #1e1e3a; }
-details.faq-item .answer {
-  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
-  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
-}
-.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
-.back-link:hover { color: #c9a96e; text-decoration: underline; }
-footer {
-  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
-  color: #5555aa; font-size: 0.8rem;
-}
-@media (max-width: 640px) {
-  .product-name { font-size: 1.4rem; }
-  h1 { font-size: 1.4rem; }
-  .container { padding: 0 14px; }
-  details.faq-item summary { font-size: 0.85rem; }
-}
-</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"ClipMate","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/clipmate.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"ClipMate是什么？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 是一款 Windows 剪贴板增强工具，自动捕获所有 Ctrl+C 复制操作，保存剪贴板历史记录，支持检索、收藏和管理复制过的文本内容。"}},
+{"@type":"Question","name":"ClipMate能保存什么内容？","acceptedAnswer":{"@type":"Answer","text":"目前以文本内容为主，自动捕获所有文本类型的 Ctrl+C 操作，包括纯文本、富文本、代码片段等。图片剪贴板支持在规划中。"}},
+{"@type":"Question","name":"怎么搜索剪贴板历史？","acceptedAnswer":{"@type":"Answer","text":"打开 ClipMate 主界面，顶部有搜索框，输入关键词即可快速检索所有历史记录中的匹配内容。支持实时搜索，输入即出结果。"}},
+{"@type":"Question","name":"怎么收藏常用内容？","acceptedAnswer":{"@type":"Answer","text":"在 ClipMate 历史列表中找到需要收藏的内容，点击星标按钮即可收藏。收藏的内容会固定在置顶区域，方便快速调用。"}},
+{"@type":"Question","name":"ClipMate和Ditto比怎么样？","acceptedAnswer":{"@type":"Answer","text":"ClipMate 和 Ditto 都做剪贴板管理，但 ClipMate 更注重简洁易用的界面设计和搜索体验，对中文场景优化更好，且完全免费开源。"}},
+{"@type":"Question","name":"ClipMate和Windows自带剪贴板有什么区别？","acceptedAnswer":{"@type":"Answer","text":"Windows 自带剪贴板历史（Win+V）功能有限，仅保存最近 25 条，且不支持收藏、搜索。ClipMate 无历史数量限制，支持搜索、收藏、分类管理等增强功能。"}},
+{"@type":"Question","name":"ClipMate支持快捷键吗？","acceptedAnswer":{"@type":"Answer","text":"支持。默认可通过快捷键呼出 ClipMate 主界面，也支持自定义快捷键绑定常用操作。"}},
+{"@type":"Question","name":"ClipMate占用内存大吗？","acceptedAnswer":{"@type":"Answer","text":"非常轻量，常驻内存占用极小。采用懒加载方式，历史记录保存在本地文件而非内存中，避免占用过多系统资源。"}},
+{"@type":"Question","name":"剪贴板数据安全吗？","acceptedAnswer":{"@type":"Answer","text":"绝对安全。ClipMate 纯本地运行，所有剪贴板数据仅保存在本地，不会上传网络或发送到任何远程服务器。"}},
+{"@type":"Question","name":"ClipMate会联网上传吗？","acceptedAnswer":{"@type":"Answer","text":"不会。ClipMate 完全离线运行，无任何联网需求，剪贴板中的密码、敏感信息等数据安全有保障。"}},
+{"@type":"Question","name":"ClipMate能商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。基于 MIT 协议开源，个人和企业均可免费使用、修改、再分发，无商业限制。"}},
+{"@type":"Question","name":"ClipMate的剪贴板历史能保留多久？","acceptedAnswer":{"@type":"Answer","text":"无时间限制。历史记录永久保存直到用户手动清理。可在设置中调整保留策略，如只保留最近 N 条或定期清理。"}}
+]}</script>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:KaiTi,STKaiti,SimSun,"Noto Serif SC","Songti SC",serif;background:#0f0f23;color:#d4c9a8;line-height:1.8;min-height:100vh}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0f0f23}::-webkit-scrollbar-thumb{background:#3a3a5c;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#c9a96e}h1,h2,h3{font-weight:normal}h1{font-size:2rem}h2{font-size:1.5rem;color:#c9a96e;letter-spacing:0.12em;margin-bottom:1.5rem}h2::after{content:'';display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c9a96e,transparent);margin:0.5rem auto 0}.container{max-width:900px;margin:0 auto;padding:0 20px}header{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f23 50%,#1a1a2e 100%);border-bottom:1px solid #2a2a4a;padding:2rem 0;text-align:center;position:relative}header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#c9a96e,#d4a76a,#c9a96e,transparent)}.breadcrumb{color:#6666aa;font-size:0.85rem;margin-bottom:0.8rem}.breadcrumb a{color:#8888cc;text-decoration:none}.breadcrumb a:hover{color:#c9a96e;text-decoration:underline}.product-info{padding:2rem 0;text-align:center}.product-icon{font-size:3rem;margin-bottom:0.5rem}.product-name{font-size:1.8rem;color:#d4a76a}.product-name-en{font-size:0.9rem;color:#5555aa}.product-desc{color:#9999bb;font-size:0.95rem;max-width:600px;margin:0 auto 1rem}.tag{display:inline-block;font-size:0.75rem;padding:2px 10px;border-radius:3px;background:#1a1a3e;color:#8888bb;border:1px solid #2a2a5a}.tag.sys{color:#98c379;border-color:#98c37944}.faq-section{padding:2rem 0}.faq-category{margin-bottom:2rem}.faq-category h3{font-size:1.1rem;color:#c9a96e;margin-bottom:0.8rem;padding-left:0.5rem;border-left:3px solid #c9a96e}details.faq-item{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;margin-bottom:6px;overflow:hidden;transition:border-color 0.2s}details.faq-item[open]{border-color:#c9a96e44}details.faq-item summary{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:#c9c9dd;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}details.faq-item summary::-webkit-details-marker{display:none}details.faq-item summary::before{content:'▸';font-size:0.8rem;color:#c9a96e;transition:transform 0.2s;flex-shrink:0}details.faq-item[open] summary::before{transform:rotate(90deg)}details.faq-item summary:hover{background:#1e1e3a}details.faq-item .answer{padding:0 16px 12px;font-size:0.86rem;color:#9999bb;line-height:1.8;border-top:1px solid #2a2a4a;padding-top:10px}.back-link{display:inline-block;margin-top:1.5rem;color:#8888cc;text-decoration:none;font-size:0.9rem}.back-link:hover{color:#c9a96e;text-decoration:underline}footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555aa;font-size:0.8rem}@media(max-width:640px){.product-name{font-size:1.4rem}h1{font-size:1.4rem}.container{padding:0 14px}details.faq-item summary{font-size:0.85rem}}</style>
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>ClipMate</span>
-    </div>
-    <div class="product-info">
-      <div class="product-icon">📋</div>
-      <div class="product-name">ClipMate</div>
-      <div class="product-name-en">clipmate — 剪贴板管理器</div>
-      <div class="product-desc">Windows 剪贴板增强工具，历史记录、收藏管理、搜索回溯，让复制粘贴效率翻倍。</div>
-      <div><span class="tag">工具</span><span class="tag">剪贴板</span></div>
-    </div>
-  </div>
-</header>
-
-<section class="faq-section">
-  <div class="container">
-    <h2>📋 ClipMate 常见问题</h2>
-
-    <div class="faq-category">
-      <h3>定义类</h3>
-      <details class="faq-item"><summary>ClipMate是什么？</summary><div class="answer">ClipMate 是一款 Windows 桌面端剪贴板管理工具，能够记录你复制过的所有文字、图片、文件等内容，并提供搜索、收藏、分类管理功能。告别反复复制粘贴的重复劳动，大幅提升日常操作效率。</div></details>
-      <details class="faq-item"><summary>ClipMate能保存什么内容？</summary><div class="answer">ClipMate 支持保存多种剪贴板内容类型：纯文本、富文本（带格式文字）、图片（位图/PNG）、HTML 片段、文件列表等。所有内容自动记录，按时间排列，随时回溯。</div></details>
-      <details class="faq-item"><summary>ClipMate和Windows自带剪贴板区别？</summary><div class="answer">Windows 自带剪贴板（Win+V）仅保留最近 25 条历史，不支持图片预览和收藏。ClipMate 无数量上限，支持富文本和图片预览、收藏分类、全文搜索，且历史记录长期保存不自动清空。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>实操类</h3>
-      <details class="faq-item"><summary>怎么搜索历史剪贴内容？</summary><div class="answer">ClipMate 主界面顶部的搜索框支持实时全文检索，输入关键字即可快速定位到包含该内容的剪贴记录。支持按内容类型（文字/图片/文件）筛选。</div></details>
-      <details class="faq-item"><summary>怎么收藏常用内容？</summary><div class="answer">在 ClipMate 历史列表中右键点击任意记录，选择「收藏」即可将其固定到收藏夹。收藏的内容会在顶部独立展示，不会被新复制的内容冲走，适合保存常用模板、链接、代码片段等。</div></details>
-      <details class="faq-item"><summary>支持快捷键吗？</summary><div class="answer">支持。ClipMate 提供全局快捷键：默认 Ctrl+Alt+V 打开主界面，Ctrl+Alt+F 搜索，Ctrl+Alt+C 打开收藏夹。所有快捷键可在设置中自定义。</div></details>
-      <details class="faq-item"><summary>能保存图片吗？</summary><div class="answer">可以。ClipMate 支持保存复制过的图片（位图/PNG 格式），并在历史列表中显示缩略图预览。点击即可查看原图，支持再次复制或保存到本地。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>对比类</h3>
-      <details class="faq-item"><summary>ClipMate和Ditto比怎么样？</summary><div class="answer">两者都是优秀的剪贴板管理工具。ClipMate 更注重界面美观和中文用户的体验，内置全文搜索和收藏分类功能；Ditto 功能强大但界面偏技术风格。ClipMate 对零基础用户更友好，开箱即用。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>商用类</h3>
-      <details class="faq-item"><summary>剪贴板数据安全吗？会上传云端吗？</summary><div class="answer">ClipMate 所有数据本地存储，不上传云端，不联网运行。你的剪贴板内容（包括密码、链接、敏感信息）仅保存在本地数据库中，不会离开你的电脑。</div></details>
-      <details class="faq-item"><summary>占用内存大吗？</summary><div class="answer">ClipMate 经过性能优化，空闲时内存占用约 30-60MB，即使数千条历史记录也不影响系统流畅。支持设置最大记录条数和自动清理策略。</div></details>
-      <details class="faq-item"><summary>MIT协议可以商用吗？</summary><div class="answer">ClipMate 基于 MIT 协议开源，个人和企业均可免费使用、修改、再分发，无任何商业限制。企业内部部署或集成到商用产品中都完全免费。</div></details>
-    </div>
-
-    <div style="text-align:center;">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>工具猫 · ToolCat 开源工具体系</p>
-    <p><a href="https://github.com/maomaozuiwudi/clipmate" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
-  </div>
-</footer>
-
+<header><div class="container"><div class="breadcrumb"><a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>ClipMate</span></div><div class="product-info"><div class="product-icon">📋</div><div class="product-name">ClipMate</div><div class="product-name-en">clipmate</div><div class="product-desc">Windows 剪贴板管理器，自动捕获 Ctrl+C 历史</div><div><span class="tag sys">系统工具</span></div></div></div></header>
+<section class="faq-section"><div class="container"><h2>📋 ClipMate 常见问题</h2>
+<div class="faq-category"><h3>定义类</h3>
+<details class="faq-item"><summary>ClipMate是什么？</summary><div class="answer">ClipMate 是一款 Windows 剪贴板增强工具，自动捕获所有 Ctrl+C 复制操作，保存剪贴板历史记录，支持检索、收藏和管理复制过的文本内容。</div></details>
+<details class="faq-item"><summary>ClipMate能保存什么内容？</summary><div class="answer">目前以文本内容为主，自动捕获所有文本类型的 Ctrl+C 操作，包括纯文本、富文本、代码片段等。图片剪贴板支持在规划中。</div></details>
+<details class="faq-item"><summary>ClipMate适合什么人？</summary><div class="answer">适合所有需要频繁复制粘贴的用户：写作者、程序员、编辑、客服、办公人员等。尤其适合每天大量复制粘贴操作、需要回溯历史内容的场景。</div></details>
+</div>
+<div class="faq-category"><h3>实操类</h3>
+<details class="faq-item"><summary>怎么搜索剪贴板历史？</summary><div class="answer">打开 ClipMate 主界面，顶部有搜索框，输入关键词即可快速检索所有历史记录中的匹配内容。支持实时搜索，输入即出结果。</div></details>
+<details class="faq-item"><summary>怎么收藏常用内容？</summary><div class="answer">在历史列表中找到需要收藏的内容，点击星标按钮即可收藏。收藏项固定在置顶区域，方便快速调用，支持标签分类管理。</div></details>
+<details class="faq-item"><summary>怎么删除不需要的历史？</summary><div class="answer">支持单条删除和批量清空。右键点击条目选择删除，或在设置中一键清空所有历史记录。</div></details>
+<details class="faq-item"><summary>支持快捷键操作吗？</summary><div class="answer">支持。默认快捷键呼出主界面，快捷键自定义配置，支持快速粘贴最近 N 条历史。</div></details>
+</div>
+<div class="faq-category"><h3>对比类</h3>
+<details class="faq-item"><summary>和Ditto比怎么样？</summary><div class="answer">ClipMate 和 Ditto 都是剪贴板管理器。ClipMate 更注重简洁界面和搜索体验，对中文场景优化更好，完全免费开源无广告。</div></details>
+<details class="faq-item"><summary>和Windows自带剪贴板有什么区别？</summary><div class="answer">Windows 自带剪贴板（Win+V）只保存最近 25 条，不支持收藏和搜索。ClipMate 无历史上限，支持搜索、收藏、分类管理，功能全面得多。</div></details>
+<details class="faq-item"><summary>和第三方剪贴板工具比优势在哪？</summary><div class="answer">ClipMate 开源免费、纯本地运行、轻量无广告。许多第三方工具要么收费，要么有功能限制，要么带广告和隐私风险。</div></details>
+</div>
+<div class="faq-category"><h3>商用类</h3>
+<details class="faq-item"><summary>剪贴板数据安全吗？</summary><div class="answer">绝对安全。纯本地运行，所有数据仅保存在本地文件，不会上传网络或发送到任何远程服务器。</div></details>
+<details class="faq-item"><summary>会联网上传吗？</summary><div class="answer">不会。ClipMate 完全离线运行，无任何联网需求，剪贴板中的密码、API Key 等敏感数据无泄漏风险。</div></details>
+<details class="faq-item"><summary>能商用吗？</summary><div class="answer">可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发，无商业限制。</div></details>
+<details class="faq-item"><summary>历史记录永久保存吗？</summary><div class="answer">无时间限制，直到用户手动清理。可在设置中调整保留策略，如最大条数限制或定期自动清理。</div></details>
+</div>
+<div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
+</div></section>
+<footer><div class="container"><p>工具猫 · ToolCat 开源工具体系</p><p><a href="https://github.com/maomaozuiwudi/clipmate" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p></div></footer>
 </body>
 </html>

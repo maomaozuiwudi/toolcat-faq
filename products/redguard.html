@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedGuard FAQ - 工具猫</title>
+<meta name="description" content="RedGuard FAQ：店铺运营监控与风险预警系统，涵盖数据监控、异常检测、风险预警、日报生成功能。">
+<meta name="keywords" content="RedGuard, 店铺监控, 风险预警, 电商工具, 数据监控, 工具猫">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/redguard.html">
+<meta name="baidu-site-verification" content="codeva-XXXXX" />
+<meta name="bing-site-verification" content="XXXXX" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
+    {"@type": "ListItem", "position": 2, "name": "RedGuard", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/redguard.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"RedGuard 是什么？","acceptedAnswer":{"@type":"Answer","text":"RedGuard 是一款店铺运营监控与风险预警系统，基于 MIT 协议开源。提供店铺数据监控、异常检测、风险预警、日报生成等功能，帮助商家实时掌握店铺运营状况。"}},
+    {"@type":"Question","name":"RedGuard 能监控哪些数据？","acceptedAnswer":{"@type":"Answer","text":"支持监控多种店铺运营数据，包括：订单量、销售额、访问量、转化率、退货率、库存变化等关键指标，支持自定义监控维度。"}},
+    {"@type":"Question","name":"异常检测怎么工作？","acceptedAnswer":{"@type":"Answer","text":"异常检测基于历史数据建立基线模型，当实时数据偏离基线超过设定阈值时触发告警。支持自定义灵敏度，减少误报。检测维度包括：销量骤降/骤升、转化率异常、退货率突增等。"}},
+    {"@type":"Question","name":"风险预警怎么通知？","acceptedAnswer":{"@type":"Answer","text":"支持多种通知方式：桌面弹窗通知、邮件推送、Webhook 回调等。用户可根据需要配置通知渠道和级别，确保重要预警不被遗漏。"}},
+    {"@type":"Question","name":"日报生成包含什么内容？","acceptedAnswer":{"@type":"Answer","text":"日报包含当日运营数据汇总、关键指标趋势图、异常事件记录、同比/环比分析等。支持自定义日报模板和导出格式（PDF/Excel/HTML）。"}},
+    {"@type":"Question","name":"RedGuard 免费吗？","acceptedAnswer":{"@type":"Answer","text":"完全免费，基于 MIT 协议开源。无功能限制、无使用次数限制，个人和企业均可免费使用。GitHub 搜索 maomaozuiwudi/redguard 即可获取源码。"}},
+    {"@type":"Question","name":"需要什么运行环境？","acceptedAnswer":{"@type":"Answer","text":"Windows 10/11 系统。提供编译好的 EXE 可执行文件，下载后双击即可运行。如需运行源码需 Python 3.11+ 环境。"}}
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
+  background: #0f0f23;
+  color: #d4c9a8;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f0f23; }
+::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
+h1, h2, h3, h4 { font-weight: normal; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
+h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
+  border-bottom: 1px solid #2a2a4a;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+header::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
+}
+.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
+.breadcrumb a { color: #8888cc; text-decoration: none; }
+.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
+.product-info { padding: 2rem 0; text-align: center; }
+.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.product-name { font-size: 1.8rem; color: #d4a76a; }
+.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
+.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
+.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
+.tag.biz { color: #7ec8e3; border-color: #7ec8e344; }
+.tag.sys { color: #98c379; border-color: #98c37944; }
+.faq-section { padding: 2rem 0; }
+.faq-category { margin-bottom: 2rem; }
+.faq-category h3 {
+  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
+  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
+}
+details.faq-item {
+  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
+  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
+}
+details.faq-item[open] { border-color: #c9a96e44; }
+details.faq-item summary {
+  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
+  color: #c9c9dd; list-style: none; display: flex; align-items: center;
+  gap: 8px; user-select: none;
+}
+details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item summary::before {
+  content: '▸'; font-size: 0.8rem; color: #c9a96e;
+  transition: transform 0.2s; flex-shrink: 0;
+}
+details.faq-item[open] summary::before { transform: rotate(90deg); }
+details.faq-item summary:hover { background: #1e1e3a; }
+details.faq-item .answer {
+  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
+  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
+}
+.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
+.back-link:hover { color: #c9a96e; text-decoration: underline; }
+footer {
+  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
+  color: #5555aa; font-size: 0.8rem;
+}
+@media (max-width: 640px) {
+  .product-name { font-size: 1.4rem; }
+  h1 { font-size: 1.4rem; }
+  .container { padding: 0 14px; }
+  details.faq-item summary { font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>RedGuard</span>
+    </div>
+    <div class="product-info">
+      <div class="product-icon">🛡️</div>
+      <div class="product-name">RedGuard</div>
+      <div class="product-name-en">RedGuard</div>
+      <div class="product-desc">店铺运营监控与风险预警系统</div>
+      <div><span class="tag biz">电商</span><span class="tag sys">监控</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>🛡️ RedGuard 常见问题</h2>
+
+    <div class="faq-category">
+      <h3>产品介绍</h3>
+      <details class="faq-item"><summary>RedGuard 是什么？</summary><div class="answer">RedGuard 是一款店铺运营监控与风险预警系统，基于 MIT 协议开源。提供店铺数据监控、异常检测、风险预警、日报生成等功能，帮助商家实时掌握店铺运营状况，及时发现并处理异常。</div></details>
+      <details class="faq-item"><summary>RedGuard 能监控哪些数据？</summary><div class="answer">支持监控多种店铺运营数据，包括：订单量、销售额、访问量、转化率、退货率、库存变化等关键指标，支持自定义监控维度。</div></details>
+      <details class="faq-item"><summary>适合什么类型的店铺？</summary><div class="answer">适用于各类电商店铺，包括淘宝、京东、拼多多、抖音小店、跨境平台（Shopify/速卖通等）的运营监控。支持自定义数据源接入。</div></details>
+    </div>
+
+    <div class="faq-category">
+      <h3>功能说明</h3>
+      <details class="faq-item"><summary>异常检测怎么工作？</summary><div class="answer">异常检测基于历史数据建立基线模型，当实时数据偏离基线超过设定阈值时触发告警。支持自定义灵敏度，减少误报。检测维度包括：销量骤降/骤升、转化率异常、退货率突增等。</div></details>
+      <details class="faq-item"><summary>风险预警怎么通知？</summary><div class="answer">支持多种通知方式：桌面弹窗通知、邮件推送、Webhook 回调等。用户可根据需要配置通知渠道和级别，确保重要预警不被遗漏。</div></details>
+      <details class="faq-item"><summary>日报生成包含什么内容？</summary><div class="answer">日报包含当日运营数据汇总、关键指标趋势图、异常事件记录、同比/环比分析等。支持自定义日报模板和导出格式（PDF/Excel/HTML）。</div></details>
+      <details class="faq-item"><summary>数据安全如何保障？</summary><div class="answer">所有店铺数据均存储在本地，不会上传到任何云端服务器。RedGuard 纯本地运行，店铺信息完全由用户自己掌控。</div></details>
+    </div>
+
+    <div class="faq-category">
+      <h3>使用相关</h3>
+      <details class="faq-item"><summary>RedGuard 免费吗？</summary><div class="answer">完全免费，基于 MIT 协议开源。无功能限制、无使用次数限制，个人和企业均可免费使用。GitHub 搜索 maomaozuiwudi/redguard 即可获取源码。</div></details>
+      <details class="faq-item"><summary>需要什么运行环境？</summary><div class="answer">Windows 10/11 系统。提供编译好的 EXE 可执行文件，下载后双击即可运行。如需运行源码需 Python 3.11+ 环境。</div></details>
+      <details class="faq-item"><summary>支持多店铺监控吗？</summary><div class="answer">支持。可以添加多个店铺进行统一监控和管理，每个店铺的数据独立展示，支持多店铺数据对比分析。</div></details>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>工具猫 · ToolCat 开源工具体系</p>
+    <p><a href="https://github.com/maomaozuiwudi/redguard" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,179 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>一键重命名 FAQ - 工具猫</title>
-<meta name="description" content="一键重命名 FAQ：批量文件重命名工具常见问题，涵盖定义、操作、对比、商用，规则、正则、撤销等。">
-<meta name="keywords" content="一键重命名, 批量重命名, 文件重命名, Renamer替代, 正则重命名">
+<meta name="description" content="一键重命名 FAQ：7种命名规则批量重命名、序号递增、前缀后缀、正则替换等常见问题。">
+<meta name="keywords" content="一键重命名, 批量重命名, 文件重命名, 工具猫">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/yijianzhongmingming.html">
-<meta name="baidu-site-verification" content="codeva-XXXXX" />
-<meta name="bing-site-verification" content="XXXXX" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
-    {"@type": "ListItem", "position": 2, "name": "一键重命名", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/yijianzhongmingming.html"}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"一键重命名是什么？","acceptedAnswer":{"@type":"Answer","text":"一键重命名是一款 Windows 桌面端文件批量重命名工具，支持多种命名规则组合（序号填充、替换、添加前缀/后缀、按日期命名、正则表达式匹配等），可一次性重命名数百个文件。"}},
-    {"@type":"Question","name":"一键重命名支持哪些规则？","acceptedAnswer":{"@type":"Answer","text":"支持规则：序号填充（001/01/1 等多种格式）、查找替换、添加前缀/后缀、删除指定字符、按创建/修改日期命名、正则表达式替换、大小写转换、扩展名修改。多条规则可叠加组合使用。"}},
-    {"@type":"Question","name":"能批量重命名吗？","acceptedAnswer":{"@type":"Answer","text":"可以。选择或拖入多个文件后，添加需要的命名规则组合，实时预览重命名结果，确认无误后一键执行。支持数百个文件的批量重命名。"}},
-    {"@type":"Question","name":"支持正则表达式吗？","acceptedAnswer":{"@type":"Answer","text":"支持。可在「正则替换」规则中使用正则表达式匹配文件名中的特定模式，并替换为指定内容。适合需要按复杂模式重命名的高级用户。"}},
-    {"@type":"Question","name":"能按日期重命名吗？","acceptedAnswer":{"@type":"Answer","text":"可以。选择「按日期命名」规则，可基于文件的创建日期、修改日期或拍照日期（EXIF，图片文件），按「yyyy-MM-dd」等自定义格式生成文件名。"}},
-    {"@type":"Question","name":"和Renamer/Advanced Renamer比怎么样？","acceptedAnswer":{"@type":"Answer","text":"一键重命名界面简洁友好，适合中文用户，内置规则覆盖日常 95% 的重命名需求。与 Advanced Renamer 相比，功能广度相近但更易上手。无需学习复杂界面，拖入文件即可操作。"}},
-    {"@type":"Question","name":"支持撤销吗？","acceptedAnswer":{"@type":"Answer","text":"支持。执行重命名操作后，可一键撤销恢复原名。撤销记录在程序关闭前有效。如需更深层保护，建议先在小批量文件上测试规则再执行全量操作。"}},
-    {"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"一键重命名完全免费开源，基于 MIT 协议。个人和企业均可免费使用，无付费版本。"}}
-  ]
-}
-</script>
-
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
-  background: #0f0f23;
-  color: #d4c9a8;
-  line-height: 1.8;
-  min-height: 100vh;
-}
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0f0f23; }
-::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
-h1, h2, h3, h4 { font-weight: normal; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
-h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
-.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
-  border-bottom: 1px solid #2a2a4a;
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
-}
-header::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
-}
-.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
-.breadcrumb a { color: #8888cc; text-decoration: none; }
-.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
-.product-info { padding: 2rem 0; text-align: center; }
-.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
-.product-name { font-size: 1.8rem; color: #d4a76a; }
-.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
-.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
-.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
-.faq-section { padding: 2rem 0; }
-.faq-category { margin-bottom: 2rem; }
-.faq-category h3 {
-  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
-  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
-}
-details.faq-item {
-  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
-  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
-}
-details.faq-item[open] { border-color: #c9a96e44; }
-details.faq-item summary {
-  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
-  color: #c9c9dd; list-style: none; display: flex; align-items: center;
-  gap: 8px; user-select: none;
-}
-details.faq-item summary::-webkit-details-marker { display: none; }
-details.faq-item summary::before {
-  content: '\25b8'; font-size: 0.8rem; color: #c9a96e;
-  transition: transform 0.2s; flex-shrink: 0;
-}
-details.faq-item[open] summary::before { transform: rotate(90deg); }
-details.faq-item summary:hover { background: #1e1e3a; }
-details.faq-item .answer {
-  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
-  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
-}
-.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
-.back-link:hover { color: #c9a96e; text-decoration: underline; }
-footer {
-  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
-  color: #5555aa; font-size: 0.8rem;
-}
-@media (max-width: 640px) {
-  .product-name { font-size: 1.4rem; }
-  h1 { font-size: 1.4rem; }
-  .container { padding: 0 14px; }
-  details.faq-item summary { font-size: 0.85rem; }
-}
-</style>
+<meta name="baidu-site-verification" content="codeva-XXXXX" /><meta name="bing-site-verification" content="XXXXX" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"一键重命名","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/yijianzhongmingming.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"一键重命名是什么？","acceptedAnswer":{"@type":"Answer","text":"一键重命名是一款批量文件重命名工具，支持7种命名规则：序号递增、前缀/后缀添加、替换、日期时间、正则替换、大小写转换、自定义模板。"}},
+{"@type":"Question","name":"支持哪些命名规则？","acceptedAnswer":{"@type":"Answer","text":"7种规则：1) 序号递增命名；2) 添加前缀/后缀；3) 文本替换；4) 日期时间格式；5) 正则表达式替换；6) 大小写转换；7) 自定义模板命名。"}},
+{"@type":"Question","name":"怎么批量重命名？","acceptedAnswer":{"@type":"Answer","text":"拖拽或点击添加文件，选择命名规则（如序号递增+前缀），设置参数，点击预览确认后执行重命名。支持撤销操作。"}},
+{"@type":"Question","name":"支持预览吗？","acceptedAnswer":{"@type":"Answer","text":"支持。执行前会显示新旧文件名对照预览，确认无误后再执行，防止命名错误。"}},
+{"@type":"Question","name":"一键重命名和批量重命名工具比怎么样？","acceptedAnswer":{"@type":"Answer","text":"市面上同类工具大多收费或有限制，一键重命名完全开源免费，7种规则覆盖主流场景，界面简洁直观。"}},
+{"@type":"Question","name":"能商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发。"}},
+{"@type":"Question","name":"支持撤销吗？","acceptedAnswer":{"@type":"Answer","text":"支持。重命名操作可一键撤销恢复到原始文件名，避免误操作。"}},
+{"@type":"Question","name":"能处理多少文件？","acceptedAnswer":{"@type":"Answer","text":"支持大量文件批量操作，理论上无数量上限。处理速度取决于文件数量和文件系统响应。"}},
+{"@type":"Question","name":"安全吗？","acceptedAnswer":{"@type":"Answer","text":"纯本地运行，不联网不上传。重命名前预览确认，且支持一键撤销，安全可靠。"}}
+]}</script>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:KaiTi,STKaiti,SimSun,"Noto Serif SC","Songti SC",serif;background:#0f0f23;color:#d4c9a8;line-height:1.8;min-height:100vh}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0f0f23}::-webkit-scrollbar-thumb{background:#3a3a5c;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#c9a96e}h1,h2,h3{font-weight:normal}h1{font-size:2rem}h2{font-size:1.5rem;color:#c9a96e;letter-spacing:0.12em;margin-bottom:1.5rem}h2::after{content:'';display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c9a96e,transparent);margin:0.5rem auto 0}.container{max-width:900px;margin:0 auto;padding:0 20px}header{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f23 50%,#1a1a2e 100%);border-bottom:1px solid #2a2a4a;padding:2rem 0;text-align:center;position:relative}header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#c9a96e,#d4a76a,#c9a96e,transparent)}.breadcrumb{color:#6666aa;font-size:0.85rem;margin-bottom:0.8rem}.breadcrumb a{color:#8888cc;text-decoration:none}.breadcrumb a:hover{color:#c9a96e;text-decoration:underline}.product-info{padding:2rem 0;text-align:center}.product-icon{font-size:3rem;margin-bottom:0.5rem}.product-name{font-size:1.8rem;color:#d4a76a}.product-name-en{font-size:0.9rem;color:#5555aa}.product-desc{color:#9999bb;font-size:0.95rem;max-width:600px;margin:0 auto 1rem}.tag{display:inline-block;font-size:0.75rem;padding:2px 10px;border-radius:3px;background:#1a1a3e;color:#8888bb;border:1px solid #2a2a5a}.tag.sys{color:#98c379;border-color:#98c37944}.faq-section{padding:2rem 0}.faq-category{margin-bottom:2rem}.faq-category h3{font-size:1.1rem;color:#c9a96e;margin-bottom:0.8rem;padding-left:0.5rem;border-left:3px solid #c9a96e}details.faq-item{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;margin-bottom:6px;overflow:hidden;transition:border-color 0.2s}details.faq-item[open]{border-color:#c9a96e44}details.faq-item summary{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:#c9c9dd;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}details.faq-item summary::-webkit-details-marker{display:none}details.faq-item summary::before{content:'▸';font-size:0.8rem;color:#c9a96e;transition:transform 0.2s;flex-shrink:0}details.faq-item[open] summary::before{transform:rotate(90deg)}details.faq-item summary:hover{background:#1e1e3a}details.faq-item .answer{padding:0 16px 12px;font-size:0.86rem;color:#9999bb;line-height:1.8;border-top:1px solid #2a2a4a;padding-top:10px}.back-link{display:inline-block;margin-top:1.5rem;color:#8888cc;text-decoration:none;font-size:0.9rem}.back-link:hover{color:#c9a96e;text-decoration:underline}footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555aa;font-size:0.8rem}@media(max-width:640px){.product-name{font-size:1.4rem}h1{font-size:1.4rem}.container{padding:0 14px}details.faq-item summary{font-size:0.85rem}}</style>
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>一键重命名</span>
-    </div>
-    <div class="product-info">
-      <div class="product-icon">📄</div>
-      <div class="product-name">一键重命名</div>
-      <div class="product-name-en">batch-renamer — 一键重命名</div>
-      <div class="product-desc">文件批量重命名利器，支持多种规则、正则匹配、序号填充、日期命名。</div>
-      <div><span class="tag">工具</span><span class="tag">文件</span><span class="tag">重命名</span></div>
-    </div>
-  </div>
-</header>
-
-<section class="faq-section">
-  <div class="container">
-    <h2>📄 一键重命名 常见问题</h2>
-
-    <div class="faq-category">
-      <h3>定义类</h3>
-      <details class="faq-item"><summary>一键重命名是什么？</summary><div class="answer">一键重命名是一款 Windows 桌面端文件批量重命名工具，支持多种命名规则组合（序号填充、替换、添加前缀/后缀、按日期命名、正则表达式匹配等），可一次性重命名数百个文件。</div></details>
-      <details class="faq-item"><summary>一键重命名支持哪些规则？</summary><div class="answer">支持规则：序号填充（001/01/1 等多种格式）、查找替换、添加前缀/后缀、删除指定字符、按创建/修改日期命名、正则表达式替换、大小写转换、扩展名修改。多条规则可叠加组合使用。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>实操类</h3>
-      <details class="faq-item"><summary>能批量重命名吗？</summary><div class="answer">可以。选择或拖入多个文件后，添加需要的命名规则组合，实时预览重命名结果，确认无误后一键执行。支持数百个文件的批量重命名。</div></details>
-      <details class="faq-item"><summary>支持正则表达式吗？</summary><div class="answer">支持。可在「正则替换」规则中使用正则表达式匹配文件名中的特定模式，并替换为指定内容。适合需要按复杂模式重命名的高级用户。</div></details>
-      <details class="faq-item"><summary>能按日期重命名吗？</summary><div class="answer">可以。选择「按日期命名」规则，可基于文件的创建日期、修改日期或拍照日期（EXIF，图片文件），按「yyyy-MM-dd」等自定义格式生成文件名。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>对比类</h3>
-      <details class="faq-item"><summary>和Renamer/Advanced Renamer比怎么样？</summary><div class="answer">一键重命名界面简洁友好，适合中文用户，内置规则覆盖日常 95% 的重命名需求。与 Advanced Renamer 相比，功能广度相近但更易上手。无需学习复杂界面，拖入文件即可操作。</div></details>
-      <details class="faq-item"><summary>支持撤销吗？</summary><div class="answer">支持。执行重命名操作后，可一键撤销恢复原名。撤销记录在程序关闭前有效。如需更深层保护，建议先在小批量文件上测试规则再执行全量操作。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>商用类</h3>
-      <details class="faq-item"><summary>免费吗？</summary><div class="answer">一键重命名完全免费开源，基于 MIT 协议。个人和企业均可免费使用，无付费版本。</div></details>
-    </div>
-
-    <div style="text-align:center;">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>工具猫 · ToolCat 开源工具体系</p>
-    <p><a href="https://github.com/maomaozuiwudi/yijianzhongmingming" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
-  </div>
-</footer>
-
+<header><div class="container"><div class="breadcrumb"><a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>一键重命名</span></div><div class="product-info"><div class="product-icon">✏️</div><div class="product-name">一键重命名</div><div class="product-name-en">yijianzhongmingming</div><div class="product-desc">7 种命名规则批量重命名</div><div><span class="tag sys">系统工具</span></div></div></div></header>
+<section class="faq-section"><div class="container"><h2>✏️ 一键重命名 常见问题</h2>
+<div class="faq-category"><h3>定义类</h3>
+<details class="faq-item"><summary>一键重命名是什么？</summary><div class="answer">一款批量文件重命名工具，支持7种命名规则：序号递增、前缀后缀、替换、日期时间、正则替换、大小写转换、自定义模板。</div></details>
+<details class="faq-item"><summary>支持哪些命名规则？</summary><div class="answer">7种规则全面覆盖：序号递增命名、添加前缀/后缀、文本查找替换、日期时间格式、正则表达式替换、大小写转换、自定义模板命名。</div></details>
+</div>
+<div class="faq-category"><h3>实操类</h3>
+<details class="faq-item"><summary>怎么用？</summary><div class="answer">拖拽或点击添加文件，选择命名规则并设置参数，点击预览确认后执行。支持撤销。</div></details>
+<details class="faq-item"><summary>支持预览吗？</summary><div class="answer">支持。执行前会显示新旧文件名对照预览，确认无误后执行，防止命名错误。</div></details>
+<details class="faq-item"><summary>支持撤销吗？</summary><div class="answer">支持一键撤销恢复到原始文件名，避免误操作。</div></details>
+<details class="faq-item"><summary>能处理多少文件？</summary><div class="answer">无数量上限，大量文件也可快速处理。</div></details>
+</div>
+<div class="faq-category"><h3>对比类</h3>
+<details class="faq-item"><summary>和其他重命名工具比怎么样？</summary><div class="answer">同类工具大多收费或有限制。一键重命名完全开源免费，7种规则覆盖主流场景，界面简洁直观。</div></details>
+<details class="faq-item"><summary>和系统自带重命名比？</summary><div class="answer">系统自带仅支持手动逐个重命名和简单序号。一键重命名提供7种规则、批量操作、预览和撤销。</div></details>
+</div>
+<div class="faq-category"><h3>商用类</h3>
+<details class="faq-item"><summary>能商用吗？</summary><div class="answer">可以。MIT 协议开源，个人和企业均可免费使用。</div></details>
+<details class="faq-item"><summary>安全吗？</summary><div class="answer">纯本地运行，不联网不上传。重命名前预览确认，支持一键撤销。</div></details>
+</div>
+<div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
+</div></section>
+<footer><div class="container"><p>工具猫 · ToolCat 开源工具体系</p></div></footer>
 </body>
 </html>

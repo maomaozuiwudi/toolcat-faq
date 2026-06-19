@@ -4,178 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DataLens 数析 FAQ - 工具猫</title>
-<meta name="description" content="DataLens 数析 FAQ：数据分析工具常见问题，涵盖定义、操作、对比、商用，支持格式、图表类型等。">
-<meta name="keywords" content="DataLens, 数析, 数据分析, 图表生成, 数据清洗, 数据可视化">
+<meta name="description" content="DataLens 数析 FAQ：CSV/Excel 可视化分析、三步出图、无需编程、百万级数据处理等。">
+<meta name="keywords" content="DataLens, 数析, CSV分析, Excel分析, 数据可视化, 工具猫">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/shuxi.html">
 <meta name="baidu-site-verification" content="codeva-XXXXX" />
 <meta name="bing-site-verification" content="XXXXX" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
-    {"@type": "ListItem", "position": 2, "name": "DataLens 数析", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/shuxi.html"}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"DataLens是什么？","acceptedAnswer":{"@type":"Answer","text":"DataLens（数析）是一款面向普通用户的数据分析桌面工具，通过图形界面即可完成数据导入、清洗、统计分析和图表生成，无需学习编程或 SQL。适合日常办公报表、学业数据分析、个人项目统计等场景。"}},
-    {"@type":"Question","name":"需要会编程吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。DataLens 所有操作通过点选完成：导入数据 -> 选择分析维度 -> 生成图表。不写一行代码，零基础用户也能快速上手。"}},
-    {"@type":"Question","name":"DataLens和Excel比怎么样？","acceptedAnswer":{"@type":"Answer","text":"Excel 是通用电子表格，数据分析需要手动写公式和制作图表，步骤繁琐。DataLens 专注数据分析场景，内置统计方法和图表模板，一键完成聚合、分组、筛选、可视化，更适合非表格专业用户。"}},
-    {"@type":"Question","name":"支持哪些数据格式？","acceptedAnswer":{"@type":"Answer","text":"支持导入 CSV、Excel（.xlsx/.xls）、JSON、TSV 等常见数据格式。可从本地文件导入，也支持粘贴表格数据直接分析。"}},
-    {"@type":"Question","name":"能生成什么图表？","acceptedAnswer":{"@type":"Answer","text":"支持柱状图、折线图、饼图、散点图、箱线图、热力图、雷达图等十余种常用图表类型。图表可自由调整颜色、标签、尺寸，支持导出为 PNG 或 SVG 矢量图。"}},
-    {"@type":"Question","name":"支持多大文件？","acceptedAnswer":{"@type":"Answer","text":"DataLens 基于高性能数据处理引擎，可轻松处理数十万行量级的数据文件。超大文件（百万行以上）建议先筛选或采样后导入，保证流畅体验。"}},
-    {"@type":"Question","name":"支持数据清洗吗？","acceptedAnswer":{"@type":"Answer","text":"支持基础数据清洗功能：删除空值行、填充缺失值、去重、类型转换、列重命名、过滤异常值等。清洗操作可通过界面可视化完成，操作历史可撤销。"}},
-    {"@type":"Question","name":"支持Mac吗？","acceptedAnswer":{"@type":"Answer","text":"DataLens 目前为 Windows 桌面版，暂不支持 macOS 和 Linux。Mac 用户可考虑在虚拟机或借助 Wine 运行。"}},
-    {"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"DataLens 完全免费开源，基于 MIT 协议。个人和商业用户均可自由使用，无付费版本，无功能限制。"}}
-  ]
-}
-</script>
-
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
-  background: #0f0f23;
-  color: #d4c9a8;
-  line-height: 1.8;
-  min-height: 100vh;
-}
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0f0f23; }
-::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
-h1, h2, h3, h4 { font-weight: normal; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
-h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
-.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
-  border-bottom: 1px solid #2a2a4a;
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
-}
-header::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
-}
-.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
-.breadcrumb a { color: #8888cc; text-decoration: none; }
-.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
-.product-info { padding: 2rem 0; text-align: center; }
-.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
-.product-name { font-size: 1.8rem; color: #d4a76a; }
-.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
-.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
-.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
-.faq-section { padding: 2rem 0; }
-.faq-category { margin-bottom: 2rem; }
-.faq-category h3 {
-  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
-  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
-}
-details.faq-item {
-  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
-  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
-}
-details.faq-item[open] { border-color: #c9a96e44; }
-details.faq-item summary {
-  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
-  color: #c9c9dd; list-style: none; display: flex; align-items: center;
-  gap: 8px; user-select: none;
-}
-details.faq-item summary::-webkit-details-marker { display: none; }
-details.faq-item summary::before {
-  content: '\25b8'; font-size: 0.8rem; color: #c9a96e;
-  transition: transform 0.2s; flex-shrink: 0;
-}
-details.faq-item[open] summary::before { transform: rotate(90deg); }
-details.faq-item summary:hover { background: #1e1e3a; }
-details.faq-item .answer {
-  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
-  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
-}
-.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
-.back-link:hover { color: #c9a96e; text-decoration: underline; }
-footer {
-  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
-  color: #5555aa; font-size: 0.8rem;
-}
-@media (max-width: 640px) {
-  .product-name { font-size: 1.4rem; }
-  h1 { font-size: 1.4rem; }
-  .container { padding: 0 14px; }
-  details.faq-item summary { font-size: 0.85rem; }
-}
-</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"DataLens数析","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/shuxi.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"DataLens数析是什么？","acceptedAnswer":{"@type":"Answer","text":"DataLens 数析是一款桌面端数据分析工具，导入 CSV 或 Excel 文件后，无需编程即可进行数据可视化分析，三步出图，适合非技术人员快速洞察数据。"}},
+{"@type":"Question","name":"DataLens需要编程吗？","acceptedAnswer":{"@type":"Answer","text":"完全不需要。三步出图：导入文件 → 选择分析维度 → 生成图表。无需编写任何代码，适合非技术人员使用。"}},
+{"@type":"Question","name":"DataLens支持哪些图表类型？","acceptedAnswer":{"@type":"Answer","text":"支持柱状图、折线图、饼图、散点图、热力图、箱线图等多种常见图表类型，可根据数据特征推荐最适合的图表。"}},
+{"@type":"Question","name":"DataLens支持多大的文件？","acceptedAnswer":{"@type":"Answer","text":"支持百万行级别数据量，采用流式读取避免内存溢出。超大文件建议先过滤再导入以提升体验。"}},
+{"@type":"Question","name":"DataLens支持哪些文件格式？","acceptedAnswer":{"@type":"Answer","text":"支持 CSV、Excel（.xlsx/.xls）格式。CSV 支持自动检测编码和分隔符，Excel 支持多工作表选择。"}},
+{"@type":"Question","name":"DataLens和Excel比怎么样？","acceptedAnswer":{"@type":"Answer","text":"Excel 功能全面但学习曲线陡峭，制作复杂图表需要较多操作。DataLens 专注快捷可视化分析，三步出图，更适合快速探索数据。"}},
+{"@type":"Question","name":"DataLens和Tableau比怎么样？","acceptedAnswer":{"@type":"Answer","text":"Tableau 是专业 BI 工具，功能强大但价格高、学习成本大。DataLens 轻量免费，适合个人和小团队的日常数据分析需求。"}},
+{"@type":"Question","name":"DataLens能商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发，无商业限制。"}},
+{"@type":"Question","name":"DataLens会泄露数据吗？","acceptedAnswer":{"@type":"Answer","text":"不会。纯本地运行，所有数据在本地处理，不上传任何数据到云端。敏感商业数据可放心使用。"}},
+{"@type":"Question","name":"图表能导出吗？","acceptedAnswer":{"@type":"Answer","text":"支持导出为 PNG、SVG 等图片格式，也可导出为 PDF。导出的图表可直接用于报告、演示等场景。"}}
+]}</script>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:KaiTi,STKaiti,SimSun,"Noto Serif SC","Songti SC",serif;background:#0f0f23;color:#d4c9a8;line-height:1.8;min-height:100vh}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0f0f23}::-webkit-scrollbar-thumb{background:#3a3a5c;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#c9a96e}h1,h2,h3{font-weight:normal}h1{font-size:2rem}h2{font-size:1.5rem;color:#c9a96e;letter-spacing:0.12em;margin-bottom:1.5rem}h2::after{content:'';display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c9a96e,transparent);margin:0.5rem auto 0}.container{max-width:900px;margin:0 auto;padding:0 20px}header{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f23 50%,#1a1a2e 100%);border-bottom:1px solid #2a2a4a;padding:2rem 0;text-align:center;position:relative}header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#c9a96e,#d4a76a,#c9a96e,transparent)}.breadcrumb{color:#6666aa;font-size:0.85rem;margin-bottom:0.8rem}.breadcrumb a{color:#8888cc;text-decoration:none}.breadcrumb a:hover{color:#c9a96e;text-decoration:underline}.product-info{padding:2rem 0;text-align:center}.product-icon{font-size:3rem;margin-bottom:0.5rem}.product-name{font-size:1.8rem;color:#d4a76a}.product-name-en{font-size:0.9rem;color:#5555aa}.product-desc{color:#9999bb;font-size:0.95rem;max-width:600px;margin:0 auto 1rem}.tag{display:inline-block;font-size:0.75rem;padding:2px 10px;border-radius:3px;background:#1a1a3e;color:#8888bb;border:1px solid #2a2a5a}.tag.data{color:#d19a66;border-color:#d19a6644}.faq-section{padding:2rem 0}.faq-category{margin-bottom:2rem}.faq-category h3{font-size:1.1rem;color:#c9a96e;margin-bottom:0.8rem;padding-left:0.5rem;border-left:3px solid #c9a96e}details.faq-item{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;margin-bottom:6px;overflow:hidden;transition:border-color 0.2s}details.faq-item[open]{border-color:#c9a96e44}details.faq-item summary{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:#c9c9dd;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}details.faq-item summary::-webkit-details-marker{display:none}details.faq-item summary::before{content:'▸';font-size:0.8rem;color:#c9a96e;transition:transform 0.2s;flex-shrink:0}details.faq-item[open] summary::before{transform:rotate(90deg)}details.faq-item summary:hover{background:#1e1e3a}details.faq-item .answer{padding:0 16px 12px;font-size:0.86rem;color:#9999bb;line-height:1.8;border-top:1px solid #2a2a4a;padding-top:10px}.back-link{display:inline-block;margin-top:1.5rem;color:#8888cc;text-decoration:none;font-size:0.9rem}.back-link:hover{color:#c9a96e;text-decoration:underline}footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555aa;font-size:0.8rem}@media(max-width:640px){.product-name{font-size:1.4rem}h1{font-size:1.4rem}.container{padding:0 14px}details.faq-item summary{font-size:0.85rem}}</style>
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>DataLens 数析</span>
-    </div>
-    <div class="product-info">
-      <div class="product-icon">📊</div>
-      <div class="product-name">DataLens 数析</div>
-      <div class="product-name-en">datalens — 数析</div>
-      <div class="product-desc">轻量级数据分析工具，无需编程，导入数据即可生成图表、清洗、统计。</div>
-      <div><span class="tag">工具</span><span class="tag">数据</span><span class="tag">图表</span></div>
-    </div>
-  </div>
-</header>
-
-<section class="faq-section">
-  <div class="container">
-    <h2>📊 DataLens 数析 常见问题</h2>
-
-    <div class="faq-category">
-      <h3>定义类</h3>
-      <details class="faq-item"><summary>DataLens是什么？</summary><div class="answer">DataLens（数析）是一款面向普通用户的数据分析桌面工具，通过图形界面即可完成数据导入、清洗、统计分析和图表生成，无需学习编程或 SQL。适合日常办公报表、学业数据分析、个人项目统计等场景。</div></details>
-      <details class="faq-item"><summary>需要会编程吗？</summary><div class="answer">不需要。DataLens 所有操作通过点选完成：导入数据 -> 选择分析维度 -> 生成图表。不写一行代码，零基础用户也能快速上手。</div></details>
-      <details class="faq-item"><summary>DataLens和Excel比怎么样？</summary><div class="answer">Excel 是通用电子表格，数据分析需要手动写公式和制作图表，步骤繁琐。DataLens 专注数据分析场景，内置统计方法和图表模板，一键完成聚合、分组、筛选、可视化，更适合非表格专业用户。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>实操类</h3>
-      <details class="faq-item"><summary>支持哪些数据格式？</summary><div class="answer">支持导入 CSV、Excel（.xlsx/.xls）、JSON、TSV 等常见数据格式。可从本地文件导入，也支持粘贴表格数据直接分析。</div></details>
-      <details class="faq-item"><summary>能生成什么图表？</summary><div class="answer">支持柱状图、折线图、饼图、散点图、箱线图、热力图、雷达图等十余种常用图表类型。图表可自由调整颜色、标签、尺寸，支持导出为 PNG 或 SVG 矢量图。</div></details>
-      <details class="faq-item"><summary>支持多大文件？</summary><div class="answer">DataLens 基于高性能数据处理引擎，可轻松处理数十万行量级的数据文件。超大文件（百万行以上）建议先筛选或采样后导入，保证流畅体验。</div></details>
-      <details class="faq-item"><summary>支持数据清洗吗？</summary><div class="answer">支持基础数据清洗功能：删除空值行、填充缺失值、去重、类型转换、列重命名、过滤异常值等。清洗操作可通过界面可视化完成，操作历史可撤销。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>对比类</h3>
-      <details class="faq-item"><summary>支持Mac吗？</summary><div class="answer">DataLens 目前为 Windows 桌面版，暂不支持 macOS 和 Linux。Mac 用户可考虑在虚拟机或借助 Wine 运行。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>商用类</h3>
-      <details class="faq-item"><summary>免费吗？</summary><div class="answer">DataLens 完全免费开源，基于 MIT 协议。个人和商业用户均可自由使用，无付费版本，无功能限制。</div></details>
-    </div>
-
-    <div style="text-align:center;">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>工具猫 · ToolCat 开源工具体系</p>
-    <p><a href="https://github.com/maomaozuiwudi/shuxi" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
-  </div>
-</footer>
-
+<header><div class="container"><div class="breadcrumb"><a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>DataLens 数析</span></div><div class="product-info"><div class="product-icon">📊</div><div class="product-name">DataLens 数析</div><div class="product-name-en">shuxi</div><div class="product-desc">CSV / Excel 可视化分析，三步出图无需编程</div><div><span class="tag data">数据分析</span></div></div></div></header>
+<section class="faq-section"><div class="container"><h2>📊 DataLens 常见问题</h2>
+<div class="faq-category"><h3>定义类</h3>
+<details class="faq-item"><summary>DataLens是什么？</summary><div class="answer">DataLens 数析是一款桌面端数据分析工具，导入 CSV/Excel 后，无需编程即可进行数据可视化分析，三步出图，适合非技术人员快速洞察数据。</div></details>
+<details class="faq-item"><summary>需要编程吗？</summary><div class="answer">完全不需要。三步出图：导入文件 → 选择分析维度 → 生成图表。无需编写任何代码。</div></details>
+<details class="faq-item"><summary>DataLens适合什么人？</summary><div class="answer">适合运营、市场、财务等需要做数据分析但不擅长编程的岗位，也适合学生做数据报告的快速可视化。</div></details>
+</div>
+<div class="faq-category"><h3>实操类</h3>
+<details class="faq-item"><summary>怎么导入数据？</summary><div class="answer">点击「导入文件」，选择 CSV 或 Excel 文件。CSV 自动检测编码和分隔符，Excel 支持选择工作表。导入后自动预览数据。</div></details>
+<details class="faq-item"><summary>支持哪些图表类型？</summary><div class="answer">柱状图、折线图、饼图、散点图、热力图、箱线图等。系统根据数据特征推荐最合适的图表。</div></details>
+<details class="faq-item"><summary>支持多大文件？</summary><div class="answer">百万行级别，流式读取避免内存溢出。超大文件建议先过滤再导入以提升体验。</div></details>
+<details class="faq-item"><summary>图表能导出吗？</summary><div class="answer">支持导出 PNG、SVG、PDF 格式。导出的图表可直接用于报告和演示。</div></details>
+</div>
+<div class="faq-category"><h3>对比类</h3>
+<details class="faq-item"><summary>和Excel比怎么样？</summary><div class="answer">Excel 功能全但学习成本高，制作复杂图表步骤多。DataLens 专注快捷可视化，三步出图，更适合快速数据探索。</div></details>
+<details class="faq-item"><summary>和Tableau比怎么样？</summary><div class="answer">Tableau 是专业 BI 工具，价格高且学习成本大。DataLens 轻量免费，适合个人和小团队日常分析需求。</div></details>
+<details class="faq-item"><summary>和Python Matplotlib比呢？</summary><div class="answer">Python 可视化需要编程基础，DataLens 无需写代码，交互式操作即可生成同等级图表。</div></details>
+</div>
+<div class="faq-category"><h3>商用类</h3>
+<details class="faq-item"><summary>能商用吗？</summary><div class="answer">可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发，无商业限制。</div></details>
+<details class="faq-item"><summary>会泄露数据吗？</summary><div class="answer">不会。纯本地运行，数据在本地处理，不上传任何数据到云端。敏感商业数据可放心使用。</div></details>
+<details class="faq-item"><summary>支持哪些文件格式？</summary><div class="answer">CSV 和 Excel（.xlsx/.xls）。CSV 自动检测编码，Excel 支持多工作表选择。</div></details>
+</div>
+<div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
+</div></section>
+<footer><div class="container"><p>工具猫 · ToolCat 开源工具体系</p><p><a href="https://github.com/maomaozuiwudi/shuxi" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p></div></footer>
 </body>
 </html>

@@ -1,181 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>图速 FAQ - 工具猫</title>
-<meta name="description" content="图速 FAQ：图片批量处理工具常见问题，涵盖定义、操作、对比、商用，格式支持、画质等。">
-<meta name="keywords" content="图速, 图片处理, 批量图片, 图片压缩, 图片水印, 格式转换">
+<meta name="description" content="图速（tusu）FAQ：批量图片处理、格式转换、压缩、裁剪、水印等8大功能常见问题。">
+<meta name="keywords" content="图速, 批量图片处理, 图片压缩, 格式转换, 工具猫">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/tusu.html">
-<meta name="baidu-site-verification" content="codeva-XXXXX" />
-<meta name="bing-site-verification" content="XXXXX" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
-    {"@type": "ListItem", "position": 2, "name": "图速", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/tusu.html"}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"图速是什么？","acceptedAnswer":{"@type":"Answer","text":"图速是一款 Windows 桌面端图片批量处理工具，支持图片压缩、格式转换、尺寸缩放、添加水印、裁剪、重命名等常用功能。可一次性处理数百张图片，大幅提升图片处理效率。"}},
-    {"@type":"Question","name":"支持哪些格式？","acceptedAnswer":{"@type":"Answer","text":"输入支持：JPG/JPEG、PNG、BMP、WEBP、GIF、TIFF 等常见格式。输出支持：JPG、PNG、WEBP、BMP。支持 RAW 格式的预览和转换（需安装相机 RAW 解码组件）。"}},
-    {"@type":"Question","name":"支持批量处理吗？","acceptedAnswer":{"@type":"Answer","text":"支持。拖拽或添加文件夹即可加载多张图片，一键应用压缩、转换、水印等操作。数百张图片批量处理，耗时仅需数秒到数十秒（取决于图片大小和处理类型）。"}},
-    {"@type":"Question","name":"压缩会损失画质吗？","acceptedAnswer":{"@type":"Answer","text":"图速提供多级压缩选项：无损压缩（文件减小但画质不变）、轻度压缩（画质几乎无感知损失）、普通压缩（画质微损但文件大幅减小）。可根据实际需求选择压缩级别。"}},
-    {"@type":"Question","name":"加水印怎么做？","acceptedAnswer":{"@type":"Answer","text":"选择「添加水印」功能，支持文字水印（自定义文字、字体、颜色、透明度、位置）和图片水印（PNG Logo 叠加）。水印参数全局统一设置，批量添加。"}},
-    {"@type":"Question","name":"支持RAW格式吗？","acceptedAnswer":{"@type":"Answer","text":"图速支持常见的 RAW 格式预览和转换为 JPG/PNG/TIFF 等通用格式。依赖 Windows 相机解码组件，建议安装 Microsoft Camera Codec Pack 以获得最佳 RAW 格式兼容性。"}},
-    {"@type":"Question","name":"和Photoshop比怎么样？","acceptedAnswer":{"@type":"Answer","text":"Photoshop 是专业级图像编辑软件，功能强大但学习成本高、启动慢、不适合批量处理。图速专注图片批处理场景，轻量快速，一键完成压缩、格式转换、水印等批量操作，是 PS 在批处理场景的高效补充。"}},
-    {"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"图速完全免费开源，基于 MIT 协议。个人和商业用户均可免费使用，无付费版本，无功能限制。"}},
-    {"@type":"Question","name":"支持什么系统？","acceptedAnswer":{"@type":"Answer","text":"目前仅支持 Windows 10/11 桌面版。暂不支持 macOS 和 Linux。"}}
-  ]
-}
-</script>
-
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
-  background: #0f0f23;
-  color: #d4c9a8;
-  line-height: 1.8;
-  min-height: 100vh;
-}
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0f0f23; }
-::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
-h1, h2, h3, h4 { font-weight: normal; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
-h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
-.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
-  border-bottom: 1px solid #2a2a4a;
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
-}
-header::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
-}
-.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
-.breadcrumb a { color: #8888cc; text-decoration: none; }
-.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
-.product-info { padding: 2rem 0; text-align: center; }
-.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
-.product-name { font-size: 1.8rem; color: #d4a76a; }
-.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
-.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
-.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
-.faq-section { padding: 2rem 0; }
-.faq-category { margin-bottom: 2rem; }
-.faq-category h3 {
-  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
-  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
-}
-details.faq-item {
-  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
-  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
-}
-details.faq-item[open] { border-color: #c9a96e44; }
-details.faq-item summary {
-  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
-  color: #c9c9dd; list-style: none; display: flex; align-items: center;
-  gap: 8px; user-select: none;
-}
-details.faq-item summary::-webkit-details-marker { display: none; }
-details.faq-item summary::before {
-  content: '\25b8'; font-size: 0.8rem; color: #c9a96e;
-  transition: transform 0.2s; flex-shrink: 0;
-}
-details.faq-item[open] summary::before { transform: rotate(90deg); }
-details.faq-item summary:hover { background: #1e1e3a; }
-details.faq-item .answer {
-  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
-  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
-}
-.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
-.back-link:hover { color: #c9a96e; text-decoration: underline; }
-footer {
-  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
-  color: #5555aa; font-size: 0.8rem;
-}
-@media (max-width: 640px) {
-  .product-name { font-size: 1.4rem; }
-  h1 { font-size: 1.4rem; }
-  .container { padding: 0 14px; }
-  details.faq-item summary { font-size: 0.85rem; }
-}
-</style>
+<meta name="baidu-site-verification" content="codeva-XXXXX" /><meta name="bing-site-verification" content="XXXXX" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"图速","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/tusu.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"图速是什么？","acceptedAnswer":{"@type":"Answer","text":"图速是一款批量图片处理工具，提供格式转换、压缩、裁剪、添加水印、批量重命名、缩放、旋转、滤镜效果等 8 大功能，支持批量处理。"}},
+{"@type":"Question","name":"图速支持哪些格式转换？","acceptedAnswer":{"@type":"Answer","text":"支持 JPG、PNG、BMP、GIF、WEBP、TIFF 等常见格式互转。输出可自定义质量和压缩等级。"}},
+{"@type":"Question","name":"图速支持RAW格式吗？","acceptedAnswer":{"@type":"Answer","text":"支持常见 RAW 格式预览和转换，建议先转为通用格式（JPG/PNG）后再进行批量处理。"}},
+{"@type":"Question","name":"图片压缩效果怎么样？","acceptedAnswer":{"@type":"Answer","text":"支持有损和无损压缩两种模式。有损压缩可大幅减小体积（通常 60-80%），无损压缩保留原始质量。压缩等级可自定义。"}},
+{"@type":"Question","name":"图速和Photoshop比怎么样？","acceptedAnswer":{"@type":"Answer","text":"Photoshop 是专业图像编辑软件，功能强大但价格高、操作复杂。图速专注批量处理和常见格式转换，适合日常批量图片处理需求。"}},
+{"@type":"Question","name":"图速能商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发，无商业限制。"}},
+{"@type":"Question","name":"图速安全吗？","acceptedAnswer":{"@type":"Answer","text":"纯本地运行，所有图片处理在本地完成，不上传任何图片到云端，敏感图片可放心处理。"}},
+{"@type":"Question","name":"批量处理效率怎么样？","acceptedAnswer":{"@type":"Answer","text":"支持一次性选择数百张图片进行批量处理，采用多线程并行处理，大幅提升效率。具体速度取决于图片大小和处理类型。"}},
+{"@type":"Question","name":"水印支持哪些样式？","acceptedAnswer":{"@type":"Answer","text":"支持文字水印（自定义字体、颜色、透明度、旋转角度、位置）和图片水印（支持 PNG 透明水印）。"}},
+{"@type":"Question","name":"在哪里下载图速？","acceptedAnswer":{"@type":"Answer","text":"GitHub 搜索 maomaozuiwudi/tusu 找到仓库，Releases 页面下载最新版本。"}}
+]}</script>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:KaiTi,STKaiti,SimSun,"Noto Serif SC","Songti SC",serif;background:#0f0f23;color:#d4c9a8;line-height:1.8;min-height:100vh}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0f0f23}::-webkit-scrollbar-thumb{background:#3a3a5c;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#c9a96e}h1,h2,h3{font-weight:normal}h1{font-size:2rem}h2{font-size:1.5rem;color:#c9a96e;letter-spacing:0.12em;margin-bottom:1.5rem}h2::after{content:'';display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c9a96e,transparent);margin:0.5rem auto 0}.container{max-width:900px;margin:0 auto;padding:0 20px}header{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f23 50%,#1a1a2e 100%);border-bottom:1px solid #2a2a4a;padding:2rem 0;text-align:center;position:relative}header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#c9a96e,#d4a76a,#c9a96e,transparent)}.breadcrumb{color:#6666aa;font-size:0.85rem;margin-bottom:0.8rem}.breadcrumb a{color:#8888cc;text-decoration:none}.breadcrumb a:hover{color:#c9a96e;text-decoration:underline}.product-info{padding:2rem 0;text-align:center}.product-icon{font-size:3rem;margin-bottom:0.5rem}.product-name{font-size:1.8rem;color:#d4a76a}.product-name-en{font-size:0.9rem;color:#5555aa}.product-desc{color:#9999bb;font-size:0.95rem;max-width:600px;margin:0 auto 1rem}.tag{display:inline-block;font-size:0.75rem;padding:2px 10px;border-radius:3px;background:#1a1a3e;color:#8888bb;border:1px solid #2a2a5a}.tag.img{color:#61afef;border-color:#61afef44}.faq-section{padding:2rem 0}.faq-category{margin-bottom:2rem}.faq-category h3{font-size:1.1rem;color:#c9a96e;margin-bottom:0.8rem;padding-left:0.5rem;border-left:3px solid #c9a96e}details.faq-item{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;margin-bottom:6px;overflow:hidden;transition:border-color 0.2s}details.faq-item[open]{border-color:#c9a96e44}details.faq-item summary{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:#c9c9dd;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}details.faq-item summary::-webkit-details-marker{display:none}details.faq-item summary::before{content:'▸';font-size:0.8rem;color:#c9a96e;transition:transform 0.2s;flex-shrink:0}details.faq-item[open] summary::before{transform:rotate(90deg)}details.faq-item summary:hover{background:#1e1e3a}details.faq-item .answer{padding:0 16px 12px;font-size:0.86rem;color:#9999bb;line-height:1.8;border-top:1px solid #2a2a4a;padding-top:10px}.back-link{display:inline-block;margin-top:1.5rem;color:#8888cc;text-decoration:none;font-size:0.9rem}.back-link:hover{color:#c9a96e;text-decoration:underline}footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555aa;font-size:0.8rem}@media(max-width:640px){.product-name{font-size:1.4rem}h1{font-size:1.4rem}.container{padding:0 14px}details.faq-item summary{font-size:0.85rem}}</style>
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>图速</span>
-    </div>
-    <div class="product-info">
-      <div class="product-icon">🖼️</div>
-      <div class="product-name">图速</div>
-      <div class="product-name-en">tusu — 图片处理工具</div>
-      <div class="product-desc">图片批量处理工具，压缩、格式转换、水印、缩放、裁剪，一应俱全。</div>
-      <div><span class="tag">工具</span><span class="tag">图片</span><span class="tag">批量</span></div>
-    </div>
-  </div>
-</header>
-
-<section class="faq-section">
-  <div class="container">
-    <h2>🖼️ 图速 常见问题</h2>
-
-    <div class="faq-category">
-      <h3>定义类</h3>
-      <details class="faq-item"><summary>图速是什么？</summary><div class="answer">图速是一款 Windows 桌面端图片批量处理工具，支持图片压缩、格式转换、尺寸缩放、添加水印、裁剪、重命名等常用功能。可一次性处理数百张图片，大幅提升图片处理效率。</div></details>
-      <details class="faq-item"><summary>支持哪些格式？</summary><div class="answer">输入支持：JPG/JPEG、PNG、BMP、WEBP、GIF、TIFF 等常见格式。输出支持：JPG、PNG、WEBP、BMP。支持 RAW 格式的预览和转换（需安装相机 RAW 解码组件）。</div></details>
-      <details class="faq-item"><summary>支持批量处理吗？</summary><div class="answer">支持。拖拽或添加文件夹即可加载多张图片，一键应用压缩、转换、水印等操作。数百张图片批量处理，耗时仅需数秒到数十秒（取决于图片大小和处理类型）。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>实操类</h3>
-      <details class="faq-item"><summary>压缩会损失画质吗？</summary><div class="answer">图速提供多级压缩选项：无损压缩（文件减小但画质不变）、轻度压缩（画质几乎无感知损失）、普通压缩（画质微损但文件大幅减小）。可根据实际需求选择压缩级别。</div></details>
-      <details class="faq-item"><summary>加水印怎么做？</summary><div class="answer">选择「添加水印」功能，支持文字水印（自定义文字、字体、颜色、透明度、位置）和图片水印（PNG Logo 叠加）。水印参数全局统一设置，批量添加。</div></details>
-      <details class="faq-item"><summary>支持RAW格式吗？</summary><div class="answer">图速支持常见的 RAW 格式预览和转换为 JPG/PNG/TIFF 等通用格式。依赖 Windows 相机解码组件，建议安装 Microsoft Camera Codec Pack 以获得最佳 RAW 格式兼容性。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>对比类</h3>
-      <details class="faq-item"><summary>和Photoshop比怎么样？</summary><div class="answer">Photoshop 是专业级图像编辑软件，功能强大但学习成本高、启动慢、不适合批量处理。图速专注图片批处理场景，轻量快速，一键完成压缩、格式转换、水印等批量操作，是 PS 在批处理场景的高效补充。</div></details>
-    </div>
-    <div class="faq-category">
-      <h3>商用类</h3>
-      <details class="faq-item"><summary>免费吗？</summary><div class="answer">图速完全免费开源，基于 MIT 协议。个人和商业用户均可免费使用，无付费版本，无功能限制。</div></details>
-      <details class="faq-item"><summary>支持什么系统？</summary><div class="answer">目前仅支持 Windows 10/11 桌面版。暂不支持 macOS 和 Linux。</div></details>
-    </div>
-
-    <div style="text-align:center;">
-      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>工具猫 · ToolCat 开源工具体系</p>
-    <p><a href="https://github.com/maomaozuiwudi/tusu" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
-  </div>
-</footer>
-
+<header><div class="container"><div class="breadcrumb"><a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>图速</span></div><div class="product-info"><div class="product-icon">🖼️</div><div class="product-name">图速</div><div class="product-name-en">tusu</div><div class="product-desc">批量图片处理：格式转换 / 压缩 / 裁剪 / 水印等 8 大功能</div><div><span class="tag img">图片</span></div></div></div></header>
+<section class="faq-section"><div class="container"><h2>🖼️ 图速 常见问题</h2>
+<div class="faq-category"><h3>定义类</h3>
+<details class="faq-item"><summary>图速是什么？</summary><div class="answer">图速是一款批量图片处理工具，提供格式转换、压缩、裁剪、水印、批量重命名、缩放、旋转、滤镜等 8 大功能，支持批量处理，提高图片处理效率。</div></details>
+<details class="faq-item"><summary>图速适合什么人？</summary><div class="answer">适合需要批量处理图片的用户：电商运营处理商品图、设计师输出多格式、摄影师批量压缩、普通用户整理照片等。</div></details>
+<details class="faq-item"><summary>支持哪些图片格式？</summary><div class="answer">支持 JPG、PNG、BMP、GIF、WEBP、TIFF 等常见格式互转。转换时可自定义质量和参数。</div></details>
+</div>
+<div class="faq-category"><h3>实操类</h3>
+<details class="faq-item"><summary>批量转换格式怎么操作？</summary><div class="answer">选择「格式转换」功能，添加图片文件，选择目标格式（如全部转 JPG），点击开始即可批量转换。支持拖拽添加文件。</div></details>
+<details class="faq-item"><summary>图片压缩怎么设置？</summary><div class="answer">选择「压缩」功能，可选择有损或无损模式。有损压缩可自定义质量百分比（如 80%），无损压缩保留原始画质但体积减小有限。</div></details>
+<details class="faq-item"><summary>支持RAW格式吗？</summary><div class="answer">支持常见 RAW 格式预览和转换，建议先转为通用格式再进行批量操作。</div></details>
+<details class="faq-item"><summary>水印支持什么样式？</summary><div class="answer">文字水印（自定义字体、颜色、透明度、旋转角度、位置）和图片水印（支持 PNG 透明水印）。</div></details>
+</div>
+<div class="faq-category"><h3>对比类</h3>
+<details class="faq-item"><summary>和Photoshop比怎么样？</summary><div class="answer">PS 专业但价格高、操作复杂。图速专注批量处理和格式转换，适合日常批量场景，完全免费。</div></details>
+<details class="faq-item"><summary>和在线图片工具比怎么样？</summary><div class="answer">图速纯本地运行，不上传图片，无文件大小限制，无需网络。在线工具有上传缓慢、隐私泄露、文件大小限制等问题。</div></details>
+<details class="faq-item"><summary>和XnConvert比怎么样？</summary><div class="answer">XnConvert 功能也不错，但图速完全开源免费，界面更简洁，对中文场景优化更好。</div></details>
+</div>
+<div class="faq-category"><h3>商用类</h3>
+<details class="faq-item"><summary>能商用吗？</summary><div class="answer">可以。MIT 协议开源，个人和企业均可免费使用。</div></details>
+<details class="faq-item"><summary>安全吗？</summary><div class="answer">纯本地运行，不上传任何图片到云端，敏感图片可放心处理。</div></details>
+<details class="faq-item"><summary>批量效率怎么样？</summary><div class="answer">支持数百张图片批量处理，多线程并行，速度取决于图片大小和类型。</div></details>
+</div>
+<div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
+</div></section>
+<footer><div class="container"><p>工具猫 · ToolCat 开源工具体系</p><p><a href="https://github.com/maomaozuiwudi/tusu" target="_blank" rel="noopener">GitHub 仓库</a></p></div></footer>
 </body>
 </html>
