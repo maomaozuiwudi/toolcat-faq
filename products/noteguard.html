@@ -1,51 +1,181 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>笔记守 FAQ - 工具猫</title>
-<meta name="description" content="笔记守（noteguard）FAQ：内容合规检查、违禁词扫描、自定义词库等常见问题。">
-<meta name="keywords" content="笔记守, 内容合规, 违禁词扫描, 内容检测, 工具猫">
+<meta name="description" content="笔记守（NoteGuard）FAQ：内容安全检测工具常见问题，涵盖定义、操作、对比、商用，检测能力、平台支持等。">
+<meta name="keywords" content="笔记守, NoteGuard, 违禁词检测, 敏感词检测, 内容安全, 文本检测">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/noteguard.html">
-<meta name="baidu-site-verification" content="codeva-XXXXX" /><meta name="bing-site-verification" content="XXXXX" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"笔记守","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/noteguard.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"笔记守是什么？","acceptedAnswer":{"@type":"Answer","text":"笔记守是一款内容合规检查工具，用于扫描文本中的违禁词和敏感内容，适用于内容发布前的合规检测，帮助内容创作者避免违规风险。"}},
-{"@type":"Question","name":"笔记守能检测什么？","acceptedAnswer":{"@type":"Answer","text":"检测文本中的违禁词、敏感词汇、广告法禁用词、政治敏感词等内容，支持自定义词库扩展。"}},
-{"@type":"Question","name":"笔记守适合什么人用？","acceptedAnswer":{"@type":"Answer","text":"适合内容创作者、编辑、运营人员、自媒体作者等需要在发布前进行合规自查的用户。"}},
-{"@type":"Question","name":"怎么使用笔记守？","acceptedAnswer":{"@type":"Answer","text":"打开笔记守，输入或粘贴要检测的文本内容，点击「开始检测」，系统自动标注出违规词汇并给出替换建议。"}},
-{"@type":"Question","name":"能自定义词库吗？","acceptedAnswer":{"@type":"Answer","text":"支持。可根据业务需求添加或删除检测关键词，灵活适配不同场景的内容合规需求。"}},
-{"@type":"Question","name":"笔记守和人工审核比怎么样？","acceptedAnswer":{"@type":"Answer","text":"笔记守自动扫描速度快、覆盖全面，不遗漏。人工审核判断更灵活但效率低、成本高。两者互补使用效果最佳。"}},
-{"@type":"Question","name":"笔记守能商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。MIT 协议开源，个人和企业均可免费使用。"}},
-{"@type":"Question","name":"笔记守安全吗？","acceptedAnswer":{"@type":"Answer","text":"纯本地运行，检测内容不上传到任何服务器，确保敏感内容不泄露。"}},
-{"@type":"Question","name":"检测速度快吗？","acceptedAnswer":{"@type":"Answer","text":"采用高效的文本匹配算法，数十万字的内容可在几秒内完成检测。"}}
-]}</script>
-<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:KaiTi,STKaiti,SimSun,"Noto Serif SC","Songti SC",serif;background:#0f0f23;color:#d4c9a8;line-height:1.8;min-height:100vh}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0f0f23}::-webkit-scrollbar-thumb{background:#3a3a5c;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#c9a96e}h1,h2,h3{font-weight:normal}h1{font-size:2rem}h2{font-size:1.5rem;color:#c9a96e;letter-spacing:0.12em;margin-bottom:1.5rem}h2::after{content:'';display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c9a96e,transparent);margin:0.5rem auto 0}.container{max-width:900px;margin:0 auto;padding:0 20px}header{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f23 50%,#1a1a2e 100%);border-bottom:1px solid #2a2a4a;padding:2rem 0;text-align:center;position:relative}header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#c9a96e,#d4a76a,#c9a96e,transparent)}.breadcrumb{color:#6666aa;font-size:0.85rem;margin-bottom:0.8rem}.breadcrumb a{color:#8888cc;text-decoration:none}.breadcrumb a:hover{color:#c9a96e;text-decoration:underline}.product-info{padding:2rem 0;text-align:center}.product-icon{font-size:3rem;margin-bottom:0.5rem}.product-name{font-size:1.8rem;color:#d4a76a}.product-name-en{font-size:0.9rem;color:#5555aa}.product-desc{color:#9999bb;font-size:0.95rem;max-width:600px;margin:0 auto 1rem}.tag{display:inline-block;font-size:0.75rem;padding:2px 10px;border-radius:3px;background:#1a1a3e;color:#8888bb;border:1px solid #2a2a5a}.tag.ai{color:#c678dd;border-color:#c678dd44}.faq-section{padding:2rem 0}.faq-category{margin-bottom:2rem}.faq-category h3{font-size:1.1rem;color:#c9a96e;margin-bottom:0.8rem;padding-left:0.5rem;border-left:3px solid #c9a96e}details.faq-item{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;margin-bottom:6px;overflow:hidden;transition:border-color 0.2s}details.faq-item[open]{border-color:#c9a96e44}details.faq-item summary{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:#c9c9dd;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}details.faq-item summary::-webkit-details-marker{display:none}details.faq-item summary::before{content:'▸';font-size:0.8rem;color:#c9a96e;transition:transform 0.2s;flex-shrink:0}details.faq-item[open] summary::before{transform:rotate(90deg)}details.faq-item summary:hover{background:#1e1e3a}details.faq-item .answer{padding:0 16px 12px;font-size:0.86rem;color:#9999bb;line-height:1.8;border-top:1px solid #2a2a4a;padding-top:10px}.back-link{display:inline-block;margin-top:1.5rem;color:#8888cc;text-decoration:none;font-size:0.9rem}.back-link:hover{color:#c9a96e;text-decoration:underline}footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555aa;font-size:0.8rem}@media(max-width:640px){.product-name{font-size:1.4rem}h1{font-size:1.4rem}.container{padding:0 14px}details.faq-item summary{font-size:0.85rem}}</style>
+<meta name="baidu-site-verification" content="codeva-XXXXX" />
+<meta name="bing-site-verification" content="XXXXX" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
+    {"@type": "ListItem", "position": 2, "name": "笔记守", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/noteguard.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"笔记守是什么？","acceptedAnswer":{"@type":"Answer","text":"笔记守（NoteGuard）是一款内容安全检测工具，自动扫描文本中的违禁词、敏感词和风险内容，帮助内容创作者、运营人员、站长在发布前检查内容合规性。支持自定义词库和多种检测模式。"}},
+    {"@type":"Question","name":"能检测哪些违禁词？","acceptedAnswer":{"@type":"Answer","text":"内置覆盖广告法敏感词、政治敏感词、违禁药品、暴力色情词库、恶意代码关键词等多个维度的词库，定期更新。检测结果会高亮定位到具体词汇和所在位置。"}},
+    {"@type":"Question","name":"支持哪些平台？","acceptedAnswer":{"@type":"Answer","text":"笔记守为 Windows 桌面应用，支持直接粘贴文本检测、导入 .txt/.md/.docx 文件检测。检测结果支持导出为报告文件。"}},
+    {"@type":"Question","name":"支持自定义词库吗？","acceptedAnswer":{"@type":"Answer","text":"支持。用户可添加自定义词库和忽略词库：自定义词库用于补充行业特定敏感词，忽略词库用于排除误报。词库支持导入导出，方便团队共享。"}},
+    {"@type":"Question","name":"准确率怎么样？","acceptedAnswer":{"@type":"Answer","text":"内置词库覆盖主流敏感词类别，检测准确率高。但语言表达千变万化，建议将笔记守作为辅助检测工具，结合人工判断做最终决策。自定义词库可进一步提升行业匹配准确率。"}},
+    {"@type":"Question","name":"会修改原内容吗？","acceptedAnswer":{"@type":"Answer","text":"不会。笔记守只读检测，不会修改你的原始文本内容。检测结果以标记和高亮形式展示，修改权在你手中。"}},
+    {"@type":"Question","name":"和普通搜索引擎比怎么样？","acceptedAnswer":{"@type":"Answer","text":"普通搜索引擎的敏感词过滤是被动的、不透明的。笔记守是主动检测工具，让你在发布内容前主动自查，清晰知道哪些词触发了什么规则，便于针对性修改，避免被动下架或处罚。"}},
+    {"@type":"Question","name":"和其他检测工具比怎么样？","acceptedAnswer":{"@type":"Answer","text":"笔记守定位桌面端轻量工具，无需联网即可检测，隐私性更好。相比在线检测平台，笔记守不上传你的文本内容到服务器，适合处理含敏感信息或商业隐私的文档。"}},
+    {"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"笔记守完全免费开源，基于 MIT 协议。个人和企业均可免费使用，无付费版本。"}}
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
+  background: #0f0f23;
+  color: #d4c9a8;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f0f23; }
+::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
+h1, h2, h3, h4 { font-weight: normal; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
+h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
+  border-bottom: 1px solid #2a2a4a;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+header::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
+}
+.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
+.breadcrumb a { color: #8888cc; text-decoration: none; }
+.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
+.product-info { padding: 2rem 0; text-align: center; }
+.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.product-name { font-size: 1.8rem; color: #d4a76a; }
+.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
+.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
+.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
+.faq-section { padding: 2rem 0; }
+.faq-category { margin-bottom: 2rem; }
+.faq-category h3 {
+  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
+  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
+}
+details.faq-item {
+  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
+  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
+}
+details.faq-item[open] { border-color: #c9a96e44; }
+details.faq-item summary {
+  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
+  color: #c9c9dd; list-style: none; display: flex; align-items: center;
+  gap: 8px; user-select: none;
+}
+details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item summary::before {
+  content: '\25b8'; font-size: 0.8rem; color: #c9a96e;
+  transition: transform 0.2s; flex-shrink: 0;
+}
+details.faq-item[open] summary::before { transform: rotate(90deg); }
+details.faq-item summary:hover { background: #1e1e3a; }
+details.faq-item .answer {
+  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
+  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
+}
+.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
+.back-link:hover { color: #c9a96e; text-decoration: underline; }
+footer {
+  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
+  color: #5555aa; font-size: 0.8rem;
+}
+@media (max-width: 640px) {
+  .product-name { font-size: 1.4rem; }
+  h1 { font-size: 1.4rem; }
+  .container { padding: 0 14px; }
+  details.faq-item summary { font-size: 0.85rem; }
+}
+</style>
 </head>
 <body>
-<header><div class="container"><div class="breadcrumb"><a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>笔记守</span></div><div class="product-info"><div class="product-icon">📖</div><div class="product-name">笔记守</div><div class="product-name-en">noteguard</div><div class="product-desc">内容合规检查，违禁词扫描</div><div><span class="tag ai">内容</span></div></div></div></header>
-<section class="faq-section"><div class="container"><h2>📖 笔记守 常见问题</h2>
-<div class="faq-category"><h3>定义类</h3>
-<details class="faq-item"><summary>笔记守是什么？</summary><div class="answer">内容合规检查工具，扫描文本中的违禁词和敏感内容，适用于发布前的合规自查。</div></details>
-<details class="faq-item"><summary>能检测什么？</summary><div class="answer">违禁词、敏感词汇、广告法禁用词、政治敏感词等，支持自定义词库扩展。</div></details>
-<details class="faq-item"><summary>适合什么人？</summary><div class="answer">内容创作者、编辑、运营人员、自媒体作者等需要合规自查的用户。</div></details>
-</div>
-<div class="faq-category"><h3>实操类</h3>
-<details class="faq-item"><summary>怎么使用？</summary><div class="answer">输入或粘贴文本，点击「开始检测」，自动标注违规词汇并给出替换建议。</div></details>
-<details class="faq-item"><summary>能自定义词库吗？</summary><div class="answer">支持。可添加或删除关键词，灵活适配不同合规需求。</div></details>
-<details class="faq-item"><summary>支持批量检测吗？</summary><div class="answer">支持同时检测多篇内容，批量输出检测报告。</div></details>
-</div>
-<div class="faq-category"><h3>对比类</h3>
-<details class="faq-item"><summary>和人工审核比？</summary><div class="answer">自动扫描快、覆盖全、不遗漏。人工审核灵活但效率低。两者互补最佳。</div></details>
-<details class="faq-item"><summary>和在线检测工具比？</summary><div class="answer">笔记守纯本地运行，不上传内容，保护数据隐私。在线工具有内容泄露风险。</div></details>
-</div>
-<div class="faq-category"><h3>商用类</h3>
-<details class="faq-item"><summary>能商用吗？</summary><div class="answer">可以。MIT 协议开源。</div></details>
-<details class="faq-item"><summary>安全吗？</summary><div class="answer">纯本地运行，检测内容不上传。完全开源可审计。</div></details>
-<details class="faq-item"><summary>检测速度快吗？</summary><div class="answer">高效匹配算法，数十万字内容几秒完成检测。</div></details>
-</div>
-<div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
-</div></section>
-<footer><div class="container"><p>工具猫 · ToolCat 开源工具体系</p></div></footer>
+
+<header>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>笔记守</span>
+    </div>
+    <div class="product-info">
+      <div class="product-icon">🛡️</div>
+      <div class="product-name">笔记守</div>
+      <div class="product-name-en">NoteGuard — 笔记守</div>
+      <div class="product-desc">内容安全检测工具，一键扫描笔记、文章中的敏感词和违禁内容。</div>
+      <div><span class="tag">工具</span><span class="tag">内容</span><span class="tag">检测</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>🛡️ 笔记守 常见问题</h2>
+
+    <div class="faq-category">
+      <h3>定义类</h3>
+      <details class="faq-item"><summary>笔记守是什么？</summary><div class="answer">笔记守（NoteGuard）是一款内容安全检测工具，自动扫描文本中的违禁词、敏感词和风险内容，帮助内容创作者、运营人员、站长在发布前检查内容合规性。支持自定义词库和多种检测模式。</div></details>
+      <details class="faq-item"><summary>能检测哪些违禁词？</summary><div class="answer">内置覆盖广告法敏感词、政治敏感词、违禁药品、暴力色情词库、恶意代码关键词等多个维度的词库，定期更新。检测结果会高亮定位到具体词汇和所在位置。</div></details>
+    </div>
+    <div class="faq-category">
+      <h3>实操类</h3>
+      <details class="faq-item"><summary>支持哪些平台？</summary><div class="answer">笔记守为 Windows 桌面应用，支持直接粘贴文本检测、导入 .txt/.md/.docx 文件检测。检测结果支持导出为报告文件。</div></details>
+      <details class="faq-item"><summary>支持自定义词库吗？</summary><div class="answer">支持。用户可添加自定义词库和忽略词库：自定义词库用于补充行业特定敏感词，忽略词库用于排除误报。词库支持导入导出，方便团队共享。</div></details>
+      <details class="faq-item"><summary>准确率怎么样？</summary><div class="answer">内置词库覆盖主流敏感词类别，检测准确率高。但语言表达千变万化，建议将笔记守作为辅助检测工具，结合人工判断做最终决策。自定义词库可进一步提升行业匹配准确率。</div></details>
+      <details class="faq-item"><summary>会修改原内容吗？</summary><div class="answer">不会。笔记守只读检测，不会修改你的原始文本内容。检测结果以标记和高亮形式展示，修改权在你手中。</div></details>
+    </div>
+    <div class="faq-category">
+      <h3>对比类</h3>
+      <details class="faq-item"><summary>和普通搜索引擎比怎么样？</summary><div class="answer">普通搜索引擎的敏感词过滤是被动的、不透明的。笔记守是主动检测工具，让你在发布内容前主动自查，清晰知道哪些词触发了什么规则，便于针对性修改，避免被动下架或处罚。</div></details>
+      <details class="faq-item"><summary>和其他检测工具比怎么样？</summary><div class="answer">笔记守定位桌面端轻量工具，无需联网即可检测，隐私性更好。相比在线检测平台，笔记守不上传你的文本内容到服务器，适合处理含敏感信息或商业隐私的文档。</div></details>
+    </div>
+    <div class="faq-category">
+      <h3>商用类</h3>
+      <details class="faq-item"><summary>免费吗？</summary><div class="answer">笔记守完全免费开源，基于 MIT 协议。个人和企业均可免费使用，无付费版本。</div></details>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>工具猫 · ToolCat 开源工具体系</p>
+    <p><a href="https://github.com/maomaozuiwudi/noteguard" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
