@@ -4,53 +4,176 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>磁盘清道夫 FAQ - 工具猫</title>
-<meta name="description" content="磁盘清道夫 FAQ：重复文件扫描、大文件分析、垃圾清理等常见问题解答。">
-<meta name="keywords" content="磁盘清道夫, 重复文件扫描, 大文件分析, 垃圾清理, 工具猫">
+<meta name="description" content="磁盘清道夫 FAQ：系统垃圾清理工具常见问题，涵盖定义、操作、对比、商用，与CCleaner对比等。">
+<meta name="keywords" content="磁盘清道夫, 磁盘清理, 系统垃圾清理, CCleaner替代, 磁盘空间">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://maomaozuiwudi.github.io/toolcat-faq/products/cipanqingdaofu.html">
 <meta name="baidu-site-verification" content="codeva-XXXXX" />
 <meta name="bing-site-verification" content="XXXXX" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"工具猫","item":"https://maomaozuiwudi.github.io/toolcat-faq/"},{"@type":"ListItem","position":2,"name":"磁盘清道夫","item":"https://maomaozuiwudi.github.io/toolcat-faq/products/cipanqingdaofu.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"磁盘清道夫是什么？","acceptedAnswer":{"@type":"Answer","text":"磁盘清道夫是一款 Windows 磁盘清理工具，提供重复文件扫描、大文件分析、系统垃圾清理三大功能，帮你找出占用磁盘空间的无用文件，释放存储空间。"}},
-{"@type":"Question","name":"磁盘清道夫可以清理什么？","acceptedAnswer":{"@type":"Answer","text":"三项核心功能：1) 重复文件扫描——找出内容完全相同的冗余文件；2) 大文件分析——按大小排序展示磁盘上的大文件；3) 系统垃圾清理——清理临时文件、缓存等。"}},
-{"@type":"Question","name":"重复文件怎么扫描？","acceptedAnswer":{"@type":"Answer","text":"选择「重复文件扫描」，设置要扫描的目录，程序会通过 MD5 哈希比对找出内容完全相同的文件，分组展示供你确认删除。"}},
-{"@type":"Question","name":"会误删重要文件吗？","acceptedAnswer":{"@type":"Answer","text":"不会。扫描结果由用户手动确认后再删除，不会自动执行删除操作。删除前可预览文件路径，双重确认保障安全。"}},
-{"@type":"Question","name":"磁盘清道夫和CCleaner比怎么样？","acceptedAnswer":{"@type":"Answer","text":"磁盘清道夫开源免费无广告，专注磁盘空间分析。CCleaner 功能更多但免费版有限制且含广告，历史上有过安全事件。"}},
-{"@type":"Question","name":"磁盘清道夫和SpaceSniffer比怎么样？","acceptedAnswer":{"@type":"Answer","text":"SpaceSniffer 仅做可视化磁盘空间分析。磁盘清道夫额外提供重复文件清理和垃圾清理功能，覆盖面更广。"}},
-{"@type":"Question","name":"磁盘清道夫安全吗？","acceptedAnswer":{"@type":"Answer","text":"纯本地运行，不联网不上传任何数据。删除操作由用户确认执行。完全开源代码可审计。"}},
-{"@type":"Question","name":"能商用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发。"}},
-{"@type":"Question","name":"扫描速度怎么样？","acceptedAnswer":{"@type":"Answer","text":"采用高效的文件哈希算法，扫描速度取决于磁盘大小和文件数量。1TB 硬盘首次全盘扫描约数分钟。"}},
-{"@type":"Question","name":"支持扫描外接硬盘吗？","acceptedAnswer":{"@type":"Answer","text":"支持。可选择任意磁盘分区或目录进行扫描，包括外接硬盘、U盘等可移动存储设备。"}}
-]}</script>
-<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:KaiTi,STKaiti,SimSun,"Noto Serif SC","Songti SC",serif;background:#0f0f23;color:#d4c9a8;line-height:1.8;min-height:100vh}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0f0f23}::-webkit-scrollbar-thumb{background:#3a3a5c;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#c9a96e}h1,h2,h3{font-weight:normal}h1{font-size:2rem}h2{font-size:1.5rem;color:#c9a96e;letter-spacing:0.12em;margin-bottom:1.5rem}h2::after{content:'';display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c9a96e,transparent);margin:0.5rem auto 0}.container{max-width:900px;margin:0 auto;padding:0 20px}header{background:linear-gradient(135deg,#1a1a2e 0%,#0f0f23 50%,#1a1a2e 100%);border-bottom:1px solid #2a2a4a;padding:2rem 0;text-align:center;position:relative}header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#c9a96e,#d4a76a,#c9a96e,transparent)}.breadcrumb{color:#6666aa;font-size:0.85rem;margin-bottom:0.8rem}.breadcrumb a{color:#8888cc;text-decoration:none}.breadcrumb a:hover{color:#c9a96e;text-decoration:underline}.product-info{padding:2rem 0;text-align:center}.product-icon{font-size:3rem;margin-bottom:0.5rem}.product-name{font-size:1.8rem;color:#d4a76a}.product-name-en{font-size:0.9rem;color:#5555aa}.product-desc{color:#9999bb;font-size:0.95rem;max-width:600px;margin:0 auto 1rem}.tag{display:inline-block;font-size:0.75rem;padding:2px 10px;border-radius:3px;background:#1a1a3e;color:#8888bb;border:1px solid #2a2a5a}.tag.sys{color:#98c379;border-color:#98c37944}.faq-section{padding:2rem 0}.faq-category{margin-bottom:2rem}.faq-category h3{font-size:1.1rem;color:#c9a96e;margin-bottom:0.8rem;padding-left:0.5rem;border-left:3px solid #c9a96e}details.faq-item{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;margin-bottom:6px;overflow:hidden;transition:border-color 0.2s}details.faq-item[open]{border-color:#c9a96e44}details.faq-item summary{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:#c9c9dd;list-style:none;display:flex;align-items:center;gap:8px;user-select:none}details.faq-item summary::-webkit-details-marker{display:none}details.faq-item summary::before{content:'▸';font-size:0.8rem;color:#c9a96e;transition:transform 0.2s;flex-shrink:0}details.faq-item[open] summary::before{transform:rotate(90deg)}details.faq-item summary:hover{background:#1e1e3a}details.faq-item .answer{padding:0 16px 12px;font-size:0.86rem;color:#9999bb;line-height:1.8;border-top:1px solid #2a2a4a;padding-top:10px}.back-link{display:inline-block;margin-top:1.5rem;color:#8888cc;text-decoration:none;font-size:0.9rem}.back-link:hover{color:#c9a96e;text-decoration:underline}footer{text-align:center;padding:1.5rem;border-top:1px solid #2a2a4a;color:#5555aa;font-size:0.8rem}@media(max-width:640px){.product-name{font-size:1.4rem}h1{font-size:1.4rem}.container{padding:0 14px}details.faq-item summary{font-size:0.85rem}}</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "工具猫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/"},
+    {"@type": "ListItem", "position": 2, "name": "磁盘清道夫", "item": "https://maomaozuiwudi.github.io/toolcat-faq/products/cipanqingdaofu.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"磁盘清道夫是什么？","acceptedAnswer":{"@type":"Answer","text":"磁盘清道夫是一款 Windows 系统垃圾清理工具，用于扫描和清除系统中的临时文件、缓存、日志、回收站残留、浏览器缓存等无用文件，释放磁盘空间，提升系统运行速度。"}},
+    {"@type":"Question","name":"能清理什么垃圾？","acceptedAnswer":{"@type":"Answer","text":"支持清理：系统临时文件、Windows 更新缓存、回收站、浏览器缓存（Chrome/Edge/Firefox）、应用程序缓存、日志文件、缩略图缓存、错误报告、旧版 Windows 备份等十余类垃圾文件。"}},
+    {"@type":"Question","name":"扫描速度快吗？","acceptedAnswer":{"@type":"Answer","text":"扫描速度取决于磁盘大小和文件数量。普通用户日常使用（500GB 左右磁盘），首次完整扫描约 10-30 秒。增量扫描更快，仅需数秒即可完成。"}},
+    {"@type":"Question","name":"支持自定义扫描吗？","acceptedAnswer":{"@type":"Answer","text":"支持。可在设置中自定义扫描范围，选择要清理的文件类型和目录路径。也支持添加自定义目录，扫描指定文件夹中的临时文件。"}},
+    {"@type":"Question","name":"扫描结果可以预览吗？","acceptedAnswer":{"@type":"Answer","text":"可以。扫描完成后，每类垃圾文件都会显示文件数量和预计释放空间大小，点击分类可查看具体文件列表，确认无误后再执行清理。"}},
+    {"@type":"Question","name":"会误删文件吗？","acceptedAnswer":{"@type":"Answer","text":"磁盘清道夫有安全保护机制：只清理系统确认可安全删除的临时和缓存文件，不涉及用户文档、照片、下载文件等个人数据。每项清理内容都可预览确认后再执行，最大程度避免误删。"}},
+    {"@type":"Question","name":"和CCleaner比怎么样？","acceptedAnswer":{"@type":"Answer","text":"磁盘清道夫完全免费开源，无广告无捆绑，界面简洁无干扰。CCleaner 免费版功能受限且有广告，高级功能需付费。磁盘清道夫核心清理能力不输 CCleaner，且隐私更有保障。"}},
+    {"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"磁盘清道夫完全免费开源，基于 MIT 协议。个人和企业均可免费使用，无付费版本，无功能限制。"}}
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: KaiTi, STKaiti, SimSun, "Noto Serif SC", "Songti SC", serif;
+  background: #0f0f23;
+  color: #d4c9a8;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f0f23; }
+::-webkit-scrollbar-thumb { background: #3a3a5c; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #c9a96e; }
+h1, h2, h3, h4 { font-weight: normal; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: #c9a96e; letter-spacing: 0.12em; margin-bottom: 1.5rem; }
+h2::after { content: ''; display: block; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #c9a96e, transparent); margin: 0.5rem auto 0; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 50%, #1a1a2e 100%);
+  border-bottom: 1px solid #2a2a4a;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+header::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c9a96e, #d4a76a, #c9a96e, transparent);
+}
+.breadcrumb { color: #6666aa; font-size: 0.85rem; margin-bottom: 0.8rem; }
+.breadcrumb a { color: #8888cc; text-decoration: none; }
+.breadcrumb a:hover { color: #c9a96e; text-decoration: underline; }
+.product-info { padding: 2rem 0; text-align: center; }
+.product-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.product-name { font-size: 1.8rem; color: #d4a76a; }
+.product-name-en { font-size: 0.9rem; color: #5555aa; margin-bottom: 0.5rem; }
+.product-desc { color: #9999bb; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; }
+.tag { display: inline-block; font-size: 0.75rem; padding: 2px 10px; border-radius: 3px; background: #1a1a3e; color: #8888bb; border: 1px solid #2a2a5a; margin: 2px; }
+.faq-section { padding: 2rem 0; }
+.faq-category { margin-bottom: 2rem; }
+.faq-category h3 {
+  font-size: 1.1rem; color: #c9a96e; margin-bottom: 0.8rem;
+  padding-left: 0.5rem; border-left: 3px solid #c9a96e;
+}
+details.faq-item {
+  background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 6px;
+  margin-bottom: 6px; overflow: hidden; transition: border-color 0.2s;
+}
+details.faq-item[open] { border-color: #c9a96e44; }
+details.faq-item summary {
+  padding: 11px 16px; cursor: pointer; font-size: 0.9rem;
+  color: #c9c9dd; list-style: none; display: flex; align-items: center;
+  gap: 8px; user-select: none;
+}
+details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item summary::before {
+  content: '\25b8'; font-size: 0.8rem; color: #c9a96e;
+  transition: transform 0.2s; flex-shrink: 0;
+}
+details.faq-item[open] summary::before { transform: rotate(90deg); }
+details.faq-item summary:hover { background: #1e1e3a; }
+details.faq-item .answer {
+  padding: 0 16px 12px; font-size: 0.86rem; color: #9999bb;
+  line-height: 1.8; border-top: 1px solid #2a2a4a; padding-top: 10px;
+}
+.back-link { display: inline-block; margin-top: 1.5rem; color: #8888cc; text-decoration: none; font-size: 0.9rem; }
+.back-link:hover { color: #c9a96e; text-decoration: underline; }
+footer {
+  text-align: center; padding: 1.5rem; border-top: 1px solid #2a2a4a;
+  color: #5555aa; font-size: 0.8rem;
+}
+@media (max-width: 640px) {
+  .product-name { font-size: 1.4rem; }
+  h1 { font-size: 1.4rem; }
+  .container { padding: 0 14px; }
+  details.faq-item summary { font-size: 0.85rem; }
+}
+</style>
 </head>
 <body>
-<header><div class="container"><div class="breadcrumb"><a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>磁盘清道夫</span></div><div class="product-info"><div class="product-icon">🧹</div><div class="product-name">磁盘清道夫</div><div class="product-name-en">cipanqingdaofu</div><div class="product-desc">重复文件扫描 / 大文件分析 / 垃圾清理</div><div><span class="tag sys">系统工具</span></div></div></div></header>
-<section class="faq-section"><div class="container"><h2>🧹 磁盘清道夫 常见问题</h2>
-<div class="faq-category"><h3>定义类</h3>
-<details class="faq-item"><summary>磁盘清道夫是什么？</summary><div class="answer">磁盘清道夫是一款 Windows 磁盘清理工具，提供重复文件扫描、大文件分析、系统垃圾清理三大功能，帮你释放磁盘存储空间。</div></details>
-<details class="faq-item"><summary>可以清理什么？</summary><div class="answer">1) 重复文件扫描——MD5 比对找出冗余文件；2) 大文件分析——按大小展示文件；3) 系统垃圾——清理临时文件和缓存。</div></details>
-<details class="faq-item"><summary>磁盘清道夫适合什么人？</summary><div class="answer">适合所有磁盘空间紧张的用户，尤其是经常下载文件、保存大量文档图片、或硬盘较小的笔记本用户。</div></details>
-</div>
-<div class="faq-category"><h3>实操类</h3>
-<details class="faq-item"><summary>重复文件怎么扫描？</summary><div class="answer">选择「重复文件扫描」，设置目录，程序通过 MD5 哈希比对找出完全相同的文件，分组展示供确认删除。</div></details>
-<details class="faq-item"><summary>大文件分析怎么看？</summary><div class="answer">选择「大文件分析」，程序扫描磁盘后按文件大小降序排列，直观展示占用空间最多的文件和目录。</div></details>
-<details class="faq-item"><summary>会误删重要文件吗？</summary><div class="answer">不会。所有删除操作由用户手动确认，不会自动执行。删除前可预览文件路径，双重确认保障安全。</div></details>
-<details class="faq-item"><summary>支持外接硬盘吗？</summary><div class="answer">支持。可选择任意磁盘分区或目录，包括外接硬盘、U盘等设备。</div></details>
-</div>
-<div class="faq-category"><h3>对比类</h3>
-<details class="faq-item"><summary>和CCleaner比怎么样？</summary><div class="answer">磁盘清道夫开源免费无广告，专注磁盘空间分析。CCleaner 功能更多但免费版有限制且含广告。</div></details>
-<details class="faq-item"><summary>和SpaceSniffer比怎么样？</summary><div class="answer">SpaceSniffer 仅做可视化磁盘空间分析。磁盘清道夫额外提供重复文件清理和垃圾清理，覆盖更全面。</div></details>
-<details class="faq-item"><summary>和Windows自带磁盘清理比呢？</summary><div class="answer">Windows 自带清理功能有限，不包含重复文件和大文件分析。磁盘清道夫提供更深入的空间分析能力。</div></details>
-</div>
-<div class="faq-category"><h3>商用类</h3>
-<details class="faq-item"><summary>能商用吗？</summary><div class="answer">可以。MIT 协议开源，个人和企业均可免费使用、修改、再分发。</div></details>
-<details class="faq-item"><summary>安全吗？</summary><div class="answer">纯本地运行，不联网不上传数据。删除操作由用户确认执行。完全开源可审计。</div></details>
-<details class="faq-item"><summary>扫描速度快吗？</summary><div class="answer">采用高效哈希算法，1TB 硬盘全盘扫描约数分钟。扫描速度取决于文件数量和磁盘性能。</div></details>
-</div>
-<div style="text-align:center;"><a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a></div>
-</div></section>
-<footer><div class="container"><p>工具猫 · ToolCat 开源工具体系</p><p><a href="https://github.com/maomaozuiwudi/cipanqingdaofu" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p></div></footer>
+
+<header>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="https://maomaozuiwudi.github.io/toolcat-faq/">工具猫</a> › <span>磁盘清道夫</span>
+    </div>
+    <div class="product-info">
+      <div class="product-icon">🔄</div>
+      <div class="product-name">磁盘清道夫</div>
+      <div class="product-name-en">disk-cleaner — 磁盘清道夫</div>
+      <div class="product-desc">Windows 磁盘空间清理利器，精准扫描、安全清理、自定义规则。</div>
+      <div><span class="tag">工具</span><span class="tag">系统</span><span class="tag">清理</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>🔄 磁盘清道夫 常见问题</h2>
+
+    <div class="faq-category">
+      <h3>定义类</h3>
+      <details class="faq-item"><summary>磁盘清道夫是什么？</summary><div class="answer">磁盘清道夫是一款 Windows 系统垃圾清理工具，用于扫描和清除系统中的临时文件、缓存、日志、回收站残留、浏览器缓存等无用文件，释放磁盘空间，提升系统运行速度。</div></details>
+      <details class="faq-item"><summary>能清理什么垃圾？</summary><div class="answer">支持清理：系统临时文件、Windows 更新缓存、回收站、浏览器缓存（Chrome/Edge/Firefox）、应用程序缓存、日志文件、缩略图缓存、错误报告、旧版 Windows 备份等十余类垃圾文件。</div></details>
+    </div>
+    <div class="faq-category">
+      <h3>实操类</h3>
+      <details class="faq-item"><summary>扫描速度快吗？</summary><div class="answer">扫描速度取决于磁盘大小和文件数量。普通用户日常使用（500GB 左右磁盘），首次完整扫描约 10-30 秒。增量扫描更快，仅需数秒即可完成。</div></details>
+      <details class="faq-item"><summary>支持自定义扫描吗？</summary><div class="answer">支持。可在设置中自定义扫描范围，选择要清理的文件类型和目录路径。也支持添加自定义目录，扫描指定文件夹中的临时文件。</div></details>
+      <details class="faq-item"><summary>扫描结果可以预览吗？</summary><div class="answer">可以。扫描完成后，每类垃圾文件都会显示文件数量和预计释放空间大小，点击分类可查看具体文件列表，确认无误后再执行清理。</div></details>
+    </div>
+    <div class="faq-category">
+      <h3>对比类</h3>
+      <details class="faq-item"><summary>会误删文件吗？</summary><div class="answer">磁盘清道夫有安全保护机制：只清理系统确认可安全删除的临时和缓存文件，不涉及用户文档、照片、下载文件等个人数据。每项清理内容都可预览确认后再执行，最大程度避免误删。</div></details>
+      <details class="faq-item"><summary>和CCleaner比怎么样？</summary><div class="answer">磁盘清道夫完全免费开源，无广告无捆绑，界面简洁无干扰。CCleaner 免费版功能受限且有广告，高级功能需付费。磁盘清道夫核心清理能力不输 CCleaner，且隐私更有保障。</div></details>
+    </div>
+    <div class="faq-category">
+      <h3>商用类</h3>
+      <details class="faq-item"><summary>免费吗？</summary><div class="answer">磁盘清道夫完全免费开源，基于 MIT 协议。个人和企业均可免费使用，无付费版本，无功能限制。</div></details>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://maomaozuiwudi.github.io/toolcat-faq/" class="back-link">← 返回工具猫主页</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>工具猫 · ToolCat 开源工具体系</p>
+    <p><a href="https://github.com/maomaozuiwudi/cipanqingdaofu" target="_blank" rel="noopener">GitHub 仓库</a> · <a href="https://github.com/maomaozuiwudi/toolcat-faq" target="_blank" rel="noopener">站点源码</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
