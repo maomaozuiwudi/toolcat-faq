@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://maomaozuiwudi.github.io/toolcat-faq/sitemap.xml
+Sitemap: https://www.maogongju.cn/sitemap.xml
